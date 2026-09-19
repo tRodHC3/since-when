@@ -1,0 +1,66 @@
+# Since When
+
+A local, single-file barcode lookup. Scan or type a UPC/EAN and see one status word plus a dated source history. Seeded products win over Open Food Facts. Unseeded barcodes stay **UNKNOWN**.
+
+## Open the app
+
+Do not double-click `index.html` and expect the camera or last-scan cache to work.
+
+`file://` has no real origin. Camera permission and `localStorage` are unreliable there, and an in-browser phone preview will often fail.
+
+Serve the folder over HTTP instead:
+
+```bash
+python -m http.server 8000
+```
+
+On Windows you can also use:
+
+```bash
+py -m http.server 8000
+```
+
+Then open [http://localhost:8000](http://localhost:8000).
+
+Typed lookup and the five demo buttons work without a camera.
+
+## Demo buttons
+
+On the scan screen, these load **seed rows only**. They never call Open Food Facts.
+
+| Button | Barcode | Status |
+| --- | --- | --- |
+| Tillamook cheddar | `000000000001` | COMPATIBLE |
+| Maker's Reserve 10-Year | `000000000002` | ANIMAL ENZYME |
+| Rocky Road | `000000000003` | NOT COMPATIBLE |
+| Marked test fixture | `000000000004` | MARKED (TEST badge; not saved) |
+| Unknown barcode | `000000000099` | UNKNOWN |
+
+## Add one event row
+
+1. Open `index.html` and find the product in the `SEED` array.
+2. Append one object to that product's `events` array. Keep authored order; the UI renders rows in array order.
+3. Every real event **must** include a `source_url`. If there is no source, the row does not exist.
+4. The only exception is a row with `"fixture": true`, which may use `https://example.invalid/fixture`.
+5. Fill the fields:
+
+```js
+{
+  "effective_on": "2016",      // or null → shown as "Date unspecified"
+  "labeled_on": null,
+  "verified_on": "2026-09-18",
+  "field": "rennet",
+  "old_value": "unspecified / prior enzyme",
+  "new_value": "fermentation-produced rennet…",
+  "source_url": "https://example.com/source-page",
+  "notes": "Short source note."
+}
+```
+
+6. Do not invent dates or verdicts. Change `product.status` only when a source supports it. Status must be one of `MARKED`, `COMPATIBLE`, `ANIMAL ENZYME`, `NOT COMPATIBLE`, `UNKNOWN`.
+7. Add the barcode to `barcodes` only for that SKU. Do not copy another SKU's status onto a different barcode.
+
+## Lookup order
+
+1. Seed table match → use the seed row. No network.
+2. Otherwise GET `https://world.openfoodfacts.org/api/v2/product/{barcode}.json?fields=product_name,brands,ingredients_text,image_url` (5s timeout). Name/brand/ingredients/image only. Status stays UNKNOWN.

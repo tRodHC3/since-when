@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Since When</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background: #0b0f14;
+      color: #f4f4f5;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.4;
+    }
+    body {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    button, input {
+      font: inherit;
+    }
+    button {
+      min-height: 48px;
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 10px;
+      background: #e5e7eb;
+      color: #111111;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:focus-visible, input:focus-visible, a:focus-visible, summary:focus-visible {
+      outline: 3px solid #fbbf24;
+      outline-offset: 2px;
+    }
+    a { color: #93c5fd; }
+    h1, h2, p { margin: 0; }
+
+    #scan-view, #result-view, #rules-view { display: none; }
+
+    .topbar {
+      padding: 16px 16px 8px;
+    }
+    .topbar h1 {
+      font-size: 1.75rem;
+      letter-spacing: -0.03em;
+    }
+    .tagline {
+      margin-top: 6px;
+      color: #d4d4d8;
+      font-size: 0.95rem;
+    }
+    .panel {
+      padding: 12px 16px 24px;
+    }
+    .camera-stage {
+      position: relative;
+      background: #000;
+      min-height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    #native-preview {
+      width: 100%;
+      height: 42vh;
+      min-height: 220px;
+      object-fit: cover;
+      display: none;
+      background: #000;
+    }
+    #reader {
+      display: none;
+      min-height: 220px;
+      width: 100%;
+      background: #000;
+    }
+    #reader video {
+      width: 100% !important;
+      height: auto !important;
+    }
+    #camera-status {
+      margin: 10px 0 0;
+      min-height: 1.4em;
+      color: #d4d4d8;
+      font-size: 0.9rem;
+    }
+    .field-label {
+      display: block;
+      margin: 18px 0 8px;
+      font-weight: 700;
+    }
+    #barcode-input {
+      width: 100%;
+      min-height: 52px;
+      padding: 12px 14px;
+      border: 2px solid #e5e7eb;
+      border-radius: 10px;
+      background: #111827;
+      color: #fff;
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+    }
+    .row-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .row-actions button { width: 100%; }
+    .demo-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .demo-grid button { width: 100%; text-align: left; }
+    .text-link {
+      display: inline-block;
+      margin-top: 18px;
+      min-height: 44px;
+      padding: 10px 0;
+      color: #e5e7eb;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    #status-block {
+      min-height: 30vh;
+      padding: 28px 16px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    #status-block.marked { background: #15803d; color: #ffffff; }
+    #status-block.compatible { background: #0f766e; color: #ffffff; }
+    #status-block.animal-enzyme { background: #ca8a04; color: #111111; }
+    #status-block.not-compatible { background: #b91c1c; color: #ffffff; }
+    #status-block.unknown { background: #4b5563; color: #ffffff; }
+
+    #test-badge {
+      display: none;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #111111;
+      color: #fbbf24;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+    #test-badge.is-visible { display: inline-block; }
+    #fixture-note {
+      display: none;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    #fixture-note.is-visible { display: block; }
+    #status-word {
+      font-size: clamp(2rem, 11vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      word-break: break-word;
+    }
+    #product-line {
+      padding: 14px 16px 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    #unknown-copy, #pack-line {
+      padding: 4px 16px 0;
+      color: #d4d4d8;
+    }
+    #off-image-wrap {
+      display: none;
+      padding: 12px 16px 0;
+    }
+    #off-image-wrap.is-visible { display: block; }
+    #off-image {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #111827;
+    }
+    #why {
+      margin: 16px;
+      padding: 4px 12px 12px;
+      border: 1px solid #374151;
+      border-radius: 10px;
+      background: #111827;
+    }
+    #why summary {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .why-row {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+    .why-row strong {
+      display: block;
+      color: #e5e7eb;
+      margin-bottom: 2px;
+    }
+    #callout {
+      display: none;
+      margin: 0 16px 12px;
+      padding: 12px 14px;
+      background: #1f2937;
+      color: #fff;
+      border-left: 4px solid #fbbf24;
+      border-radius: 0 8px 8px 0;
+      font-weight: 700;
+    }
+    #callout.is-visible { display: block; }
+    #history {
+      padding: 0 16px 16px;
+    }
+    #history h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .timeline {
+      display: grid;
+      gap: 10px;
+    }
+    .event-row {
+      padding: 12px;
+      background: #111827;
+      border-radius: 10px;
+      border: 1px solid #374151;
+    }
+    .event-date {
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .event-field {
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.75rem;
+      color: #d4d4d8;
+    }
+    .muted { color: #a1a1aa; }
+    .empty-history { color: #a1a1aa; }
+    .result-footer {
+      margin: 8px 16px 16px;
+      padding-top: 12px;
+      border-top: 1px solid #374151;
+      color: #d4d4d8;
+      font-size: 0.9rem;
+    }
+    #scan-another {
+      display: block;
+      width: calc(100% - 32px);
+      margin: 0 16px 24px;
+      background: #f4f4f5;
+    }
+    .rules-list {
+      margin: 12px 0 0;
+      padding-left: 1.15rem;
+    }
+    .rules-list li { margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <section id="scan-view">
+    <div class="topbar">
+      <h1>Since When</h1>
+      <p class="tagline">Since when was this true, and when did the pack say so?</p>
+    </div>
+    <div class="panel">
+      <div class="camera-stage">
+        <video id="native-preview" playsinline muted autoplay></video>
+        <div id="reader"></div>
+      </div>
+      <p id="camera-status">Camera starts on this screen. If it is blocked, type a barcode or use a demo product.</p>
+      <button id="start-camera" type="button">Start camera</button>
+
+      <form id="lookup-form">
+        <label class="field-label" for="barcode-input">Type a UPC or EAN</label>
+        <input id="barcode-input" type="text" inputmode="numeric" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
+        <div class="row-actions">
+          <button type="submit">Look up</button>
+          <button id="rules-link" type="button">Rules of thumb</button>
+        </div>
+      </form>
+
+      <p class="field-label">Demo products</p>
+      <div class="demo-grid">
+        <button type="button" data-barcode="000000000001">Tillamook cheddar</button>
+        <button type="button" data-barcode="000000000002">Maker's Reserve 10-Year</button>
+        <button type="button" data-barcode="000000000003">Rocky Road</button>
+        <button type="button" data-barcode="000000000004">Marked test fixture</button>
+        <button type="button" data-barcode="000000000099">Unknown barcode</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="result-view">
+    <div id="status-block" class="unknown">
+      <div id="test-badge">TEST</div>
+      <div id="status-word"></div>
+      <p id="fixture-note">Test fixture only. Not a real grocery SKU.</p>
+    </div>
+    <p id="product-line"></p>
+    <p id="unknown-copy"></p>
+    <div id="off-image-wrap"><img id="off-image" alt=""></div>
+    <details id="why">
+      <summary>Why</summary>
+      <div id="why-body"></div>
+    </details>
+    <div id="callout"></div>
+    <div id="history">
+      <h2>History</h2>
+      <div id="timeline" class="timeline"></div>
+    </div>
+    <footer class="result-footer">Not a religious ruling. Not a certifier. Sources linked.</footer>
+    <button id="scan-another" type="button">Scan another</button>
+  </section>
+
+  <section id="rules-view">
+    <div class="topbar">
+      <h1>Rules of thumb</h1>
+    </div>
+    <div class="panel">
+      <ul class="rules-list">
+        <li>Pork, bacon, lard, pork gelatin, wine or beer as an ingredient → NOT COMPATIBLE</li>
+        <li>Animal rennet or unspecified enzymes in cheese with no source → ANIMAL ENZYME. Do not guess slaughter status.</li>
+        <li>Microbial / FPC / vegetable rennet with a cited manufacturer or certifier statement → COMPATIBLE for that SKU after effective_on. MARKED only if the pack logo is sourced.</li>
+        <li>Tillamook cheddar is not Maker's Reserve. Tillamook cheese is not Rocky Road.</li>
+        <li>These rules are explanatory text. Unknown items stay UNKNOWN.</li>
+      </ul>
+      <button id="rules-back" type="button">Back to scan</button>
+    </div>
+  </section>
+
+  <script>
+    var SEED = [
+      {
+        "id": "tillamook-cheddar-standard",
+        "barcodes": ["000000000001"],
+        "brand": "Tillamook",
+        "product": "Cheddar (standard block / slices / shreds, not Maker's Reserve)",
+        "status": "COMPATIBLE",
+        "fixture": false,
+        "pack_claim": "Manufacturer states majority of cheeses are halal certified; check pack for symbol",
+        "enzyme": "FPC",
+        "events": [
+          {
+            "effective_on": "2016",
+            "labeled_on": null,
+            "verified_on": "2026-09-18",
+            "field": "rennet",
+            "old_value": "unspecified / prior enzyme",
+            "new_value": "fermentation-produced rennet that has kosher and halal certification and is vegetarian",
+            "source_url": "https://www.tillamook.com/faq/cheese",
+            "notes": "Company FAQ: Since 2016."
+          },
+          {
+            "effective_on": null,
+            "labeled_on": null,
+            "verified_on": "2026-09-18",
+            "field": "certification",
+            "old_value": null,
+            "new_value": "majority of cheeses are halal certified; check packaging for a symbol",
+            "source_url": "https://www.tillamook.com/faq/miscellaneous/are-any-of-your-products-halal",
+            "notes": "Company FAQ. No dated labeled_on on this page."
+          }
+        ]
+      },
+      {
+        "id": "tillamook-makers-reserve-10-year",
+        "barcodes": ["000000000002"],
+        "brand": "Tillamook",
+        "product": "Maker's Reserve 10-Year Extra Sharp Cheddar",
+        "status": "ANIMAL ENZYME",
+        "fixture": false,
+        "pack_claim": "Company recommends this product for people who want animal rennet",
+        "enzyme": "animal",
+        "events": [
+          {
+            "effective_on": null,
+            "labeled_on": null,
+            "verified_on": "2026-09-18",
+            "field": "rennet",
+            "old_value": null,
+            "new_value": "animal rennet",
+            "source_url": "https://www.tillamook.com/faq/cheese",
+            "notes": "FAQ exception. Slaughter method not documented."
+          },
+          {
+            "effective_on": null,
+            "labeled_on": null,
+            "verified_on": "2026-09-18",
+            "field": "rennet",
+            "old_value": null,
+            "new_value": "animal rennet exception to the vegetarian cheese range",
+            "source_url": "https://www.tillamook.com/products/cheese/makers-reserve-10-year",
+            "notes": "Product page lists cultured milk, salt, enzymes."
+          }
+        ]
+      },
+      {
+        "id": "tillamook-rocky-road",
+        "barcodes": ["000000000003"],
+        "brand": "Tillamook",
+        "product": "Rocky Road ice cream",
+        "status": "NOT COMPATIBLE",
+        "fixture": false,
+        "pack_claim": "Ice cream products are not certified halal",
+        "enzyme": null,
+        "events": [
+          {
+            "effective_on": null,
+            "labeled_on": null,
+            "verified_on": "2026-09-18",
+            "field": "certification",
+            "old_value": null,
+            "new_value": "not certified halal",
+            "source_url": "https://www.tillamook.com/faq/miscellaneous/are-any-of-your-products-halal",
+            "notes": "Company FAQ: ice cream is not certified halal."
+          },
+          {
+            "effective_on": null,
+            "labeled_on": null,
+            "verified_on": "2026-09-18",
+            "field": "gelatin",
+            "old_value": null,
+            "new_value": "pork gelatin in marshmallows",
+            "source_url": "https://www.tillamook.com/faq/ice-cream",
+            "notes": "FAQ: Rocky Road is not vegetarian because of pork gelatin marshmallows."
+          }
+        ]
+      },
+      {
+        "id": "demo-marked-after-label",
+        "barcodes": ["000000000004"],
+        "brand": "Demo",
+        "product": "Test fixture only — not a real SKU",
+        "status": "MARKED",
+        "fixture": true,
+        "pack_claim": "Synthetic pack mark for UI testing",
+        "enzyme": "FPC",
+        "events": [
+          {
+            "effective_on": "2016",
+            "labeled_on": "2026",
+            "verified_on": "2026-09-18",
+            "field": "certification",
+            "old_value": "formulation already compatible",
+            "new_value": "visible mark added later",
+            "source_url": "https://example.invalid/fixture",
+            "notes": "UI fixture to exercise MARKED and labeled_on > effective_on. Not a real product."
+          }
+        ]
+      },
+      {
+        "id": "unknown-demo",
+        "barcodes": ["000000000099"],
+        "brand": null,
+        "product": "Unknown product",
+        "status": "UNKNOWN",
+        "fixture": false,
+        "pack_claim": null,
+        "enzyme": "unknown",
+        "events": []
+      }
+    ];
+
+    var STORAGE_KEY = "sinceWhen.lastScan";
+    var STATUS_CLASSES = ["marked", "compatible", "animal-enzyme", "not-compatible", "unknown"];
+
+    var html5Qrcode;
+    var activeCameraPath = null;
+    var nativeStream = null;
+    var nativeRaf = null;
+    var nativeDetector = null;
+    var nativeScanning = false;
+    var nativeRunning = false;
+    var html5Running = false;
+    var handlingScan = false;
+    var currentResult = null;
+    var cameraBusy = false;
+
+    var scanView = document.getElementById("scan-view");
+    var resultView = document.getElementById("result-view");
+    var rulesView = document.getElementById("rules-view");
+    var nativePreview = document.getElementById("native-preview");
+    var readerEl = document.getElementById("reader");
+    var cameraStatus = document.getElementById("camera-status");
+
+    function toKebab(status) {
+      return String(status || "UNKNOWN").toLowerCase().replace(/ /g, "-");
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function formatDate(value) {
+      if (value == null || value === "") return "Date unspecified";
+      return String(value);
+    }
+
+    function formatValue(value) {
+      if (value == null || value === "") return "unspecified";
+      return String(value);
+    }
+
+    function yearPrefix(value) {
+      return String(value).slice(0, 4);
+    }
+
+    function normalizeBarcode(value) {
+      var code = String(value).replace(/\s+/g, "");
+      if (code.length === 13 && code.charAt(0) === "0") {
+        code = code.slice(1);
+      }
+      return code;
+    }
+
+    function findSeed(barcode) {
+      var code = String(barcode);
+      var i;
+      var j;
+      for (i = 0; i < SEED.length; i += 1) {
+        var bars = SEED[i].barcodes;
+        for (j = 0; j < bars.length; j += 1) {
+          if (bars[j] === code) return SEED[i];
+        }
+      }
+      return null;
+    }
+
+    function makeUnknown(barcode, extra) {
+      extra = extra || {};
+      return {
+        id: "off-" + String(barcode),
+        barcodes: [String(barcode)],
+        brand: extra.brand == null ? null : extra.brand,
+        product: extra.product || "Unknown product",
+        status: "UNKNOWN",
+        fixture: false,
+        pack_claim: null,
+        enzyme: "unknown",
+        events: [],
+        ingredients_text: extra.ingredients_text || null,
+        image_url: extra.image_url || null,
+        copy: "No reliable source."
+      };
+    }
+
+    function earliestEffectiveEvent(events) {
+      var best = null;
+      var i;
+      if (!events) return null;
+      for (i = 0; i < events.length; i += 1) {
+        var ev = events[i];
+        if (ev && ev.effective_on != null && ev.effective_on !== "") {
+          if (best == null || String(ev.effective_on) < String(best.effective_on)) {
+            best = ev;
+          }
+        }
+      }
+      return best;
+    }
+
+    function calloutText(product) {
+      var ev = earliestEffectiveEvent(product.events || []);
+      if (!ev) return null;
+      var labeled = ev.labeled_on;
+      var effective = ev.effective_on;
+      var labeledIsDate = labeled != null && labeled !== "";
+      var effectiveIsDate = effective != null && effective !== "";
+      if (labeledIsDate && effectiveIsDate && yearPrefix(labeled) > yearPrefix(effective)) {
+        return "Unlabeled period. Formulation already in this status before the box said so.";
+      }
+      if (effectiveIsDate && (labeled == null || labeled === "")) {
+        return "No pack-mark date in record.";
+      }
+      return null;
+    }
+
+    function whyDatesEvent(product) {
+      return earliestEffectiveEvent(product.events || []) || (product.events && product.events[0]) || null;
+    }
+
+    function ingredientsDroveCall(product) {
+      var parts = [];
+      var events = product.events || [];
+      var i;
+      for (i = 0; i < events.length; i += 1) {
+        var ev = events[i];
+        parts.push(formatValue(ev.field) + ": " + formatValue(ev.new_value));
+      }
+      if (product.ingredients_text) parts.push(String(product.ingredients_text));
+      return parts.length ? parts.join("; ") : "None in record.";
+    }
+
+    function setCameraStatus(text) {
+      cameraStatus.textContent = text || "";
+    }
+
+    function storageGet() {
+      try {
+        return localStorage.getItem(STORAGE_KEY);
+      } catch (err) {
+        console.error("localStorage get failed", err);
+        return null;
+      }
+    }
+
+    function storageSet(value) {
+      try {
+        localStorage.setItem(STORAGE_KEY, value);
+      } catch (err) {
+        console.error("localStorage set failed", err);
+      }
+    }
+
+    function saveLastScan(product) {
+      if (!product || product.fixture === true) return;
+      storageSet(JSON.stringify(product));
+    }
+
+    function readLastScan() {
+      var raw = storageGet();
+      if (!raw) return null;
+      try {
+        var parsed = JSON.parse(raw);
+        if (parsed && parsed.fixture === true) return null;
+        return parsed;
+      } catch (err) {
+        console.error("localStorage parse failed", err);
+        return null;
+      }
+    }
+
+    function clearResult() {
+      currentResult = null;
+      var statusBlock = document.getElementById("status-block");
+      var i;
+      for (i = 0; i < STATUS_CLASSES.length; i += 1) {
+        statusBlock.classList.remove(STATUS_CLASSES[i]);
+      }
+      statusBlock.classList.add("unknown");
+      document.getElementById("status-word").textContent = "";
+      document.getElementById("test-badge").classList.remove("is-visible");
+      document.getElementById("fixture-note").classList.remove("is-visible");
+      document.getElementById("product-line").textContent = "";
+      document.getElementById("unknown-copy").textContent = "";
+      document.getElementById("off-image-wrap").classList.remove("is-visible");
+      document.getElementById("off-image").removeAttribute("src");
+      document.getElementById("why-body").innerHTML = "";
+      document.getElementById("why").open = false;
+      document.getElementById("callout").textContent = "";
+      document.getElementById("callout").classList.remove("is-visible");
+      document.getElementById("timeline").innerHTML = "";
+    }
+
+    function renderResult(product) {
+      currentResult = product;
+      var status = product.status || "UNKNOWN";
+      var kebab = toKebab(status);
+      var statusBlock = document.getElementById("status-block");
+      var i;
+      for (i = 0; i < STATUS_CLASSES.length; i += 1) {
+        statusBlock.classList.remove(STATUS_CLASSES[i]);
+      }
+      statusBlock.classList.add(kebab);
+      document.getElementById("status-word").textContent = status;
+
+      var isFixture = product.fixture === true;
+      document.getElementById("test-badge").classList.toggle("is-visible", isFixture);
+      document.getElementById("fixture-note").classList.toggle("is-visible", isFixture);
+
+      var name = product.product || "Unknown product";
+      var brand = product.brand;
+      document.getElementById("product-line").textContent = brand ? (name + " · " + brand) : name;
+
+      var copy = "";
+      if (status === "UNKNOWN") copy = "No reliable source.";
+      document.getElementById("unknown-copy").textContent = copy;
+
+      var imgWrap = document.getElementById("off-image-wrap");
+      var img = document.getElementById("off-image");
+      if (product.image_url) {
+        img.src = product.image_url;
+        img.alt = name;
+        imgWrap.classList.add("is-visible");
+      } else {
+        img.removeAttribute("src");
+        imgWrap.classList.remove("is-visible");
+      }
+
+      var datesEv = whyDatesEvent(product);
+      var enzyme = product.enzyme == null || product.enzyme === "" ? "unknown" : String(product.enzyme);
+      var whyHtml = "";
+      whyHtml += "<div class=\"why-row\"><strong>Ingredients that drove the call</strong>" + escapeHtml(ingredientsDroveCall(product)) + "</div>";
+      whyHtml += "<div class=\"why-row\"><strong>Enzyme type</strong>" + escapeHtml(enzyme) + "</div>";
+      if (product.pack_claim) {
+        whyHtml += "<div class=\"why-row\"><strong>Pack / manufacturer claim</strong>" + escapeHtml(product.pack_claim) + "</div>";
+      }
+      whyHtml += "<div class=\"why-row\"><strong>effective_on</strong>" + escapeHtml(formatDate(datesEv ? datesEv.effective_on : null)) + "</div>";
+      whyHtml += "<div class=\"why-row\"><strong>labeled_on</strong>" + escapeHtml(formatDate(datesEv ? datesEv.labeled_on : null)) + "</div>";
+      whyHtml += "<div class=\"why-row\"><strong>verified_on</strong>" + escapeHtml(formatDate(datesEv ? datesEv.verified_on : null)) + "</div>";
+      document.getElementById("why-body").innerHTML = whyHtml;
+
+      var banner = calloutText(product);
+      var callout = document.getElementById("callout");
+      if (banner) {
+        callout.textContent = banner;
+        callout.classList.add("is-visible");
+      } else {
+        callout.textContent = "";
+        callout.classList.remove("is-visible");
+      }
+
+      var events = product.events || [];
+      var timeline = document.getElementById("timeline");
+      if (!events.length) {
+        timeline.innerHTML = "<p class=\"empty-history\">No dated events in record.</p>";
+      } else {
+        var html = "";
+        for (i = 0; i < events.length; i += 1) {
+          var ev = events[i];
+          var href = ev.source_url ? String(ev.source_url) : "";
+          html += "<article class=\"event-row\">";
+          html += "<div class=\"event-date\">" + escapeHtml(formatDate(ev.effective_on)) + "</div>";
+          html += "<div class=\"event-field\">" + escapeHtml(formatValue(ev.field)) + "</div>";
+          html += "<div>old: " + escapeHtml(formatValue(ev.old_value)) + "</div>";
+          html += "<div>new: " + escapeHtml(formatValue(ev.new_value)) + "</div>";
+          if (href) {
+            html += "<div><a href=\"" + escapeHtml(href) + "\" target=\"_blank\" rel=\"noopener noreferrer\">Source</a></div>";
+          }
+          if (ev.notes) {
+            html += "<div class=\"muted\">" + escapeHtml(ev.notes) + "</div>";
+          }
+          html += "</article>";
+        }
+        timeline.innerHTML = html;
+      }
+    }
+
+    function showResult(product, options) {
+      options = options || {};
+      renderResult(product);
+      resultView.style.display = "block";
+      scanView.style.display = "none";
+      rulesView.style.display = "none";
+      if (!options.skipSave) saveLastScan(product);
+    }
+
+    async function hideScanView() {
+      scanView.style.display = "none";
+      await stopCamera();
+    }
+
+    async function showScanView() {
+      resultView.style.display = "none";
+      rulesView.style.display = "none";
+      scanView.style.display = "block";
+      await startCamera();
+    }
+
+    function showRulesView() {
+      resultView.style.display = "none";
+      scanView.style.display = "none";
+      rulesView.style.display = "block";
+      stopCamera();
+    }
+
+    function loadHtml5Library() {
+      return new Promise(function (resolve, reject) {
+        if (window.Html5Qrcode) {
+          resolve();
+          return;
+        }
+        var script = document.createElement("script");
+        script.src = "https://unpkg.com/html5-qrcode@2.3.8";
+        script.onload = function () { resolve(); };
+        script.onerror = function () { reject(new Error("html5-qrcode failed to load")); };
+        document.head.appendChild(script);
+      });
+    }
+
+    function onSuccess(decodedText) {
+      handleScannedValue(String(decodedText));
+    }
+
+    function onError() {}
+
+    function nativeTick() {
+      if (!nativeScanning || !nativeDetector) return;
+      if (nativePreview.readyState >= 2) {
+        nativeDetector.detect(nativePreview).then(function (codes) {
+          if (!nativeScanning || handlingScan) return;
+          if (codes && codes.length) {
+            handleScannedValue(String(codes[0].rawValue));
+          }
+        }).catch(function (err) {
+          console.error("BarcodeDetector.detect failed", err);
+        });
+      }
+      nativeRaf = requestAnimationFrame(nativeTick);
+    }
+
+    async function cleanupNative() {
+      nativeScanning = false;
+      nativeRunning = false;
+      if (nativeRaf != null) {
+        cancelAnimationFrame(nativeRaf);
+        nativeRaf = null;
+      }
+      if (nativeStream) {
+        var stream = nativeStream;
+        stream.getTracks().forEach(function (t) { t.stop(); });
+        nativeStream = null;
+      }
+      nativePreview.srcObject = null;
+    }
+
+    async function stopCamera() {
+      if (nativeRunning || nativeStream) {
+        nativeScanning = false;
+        if (nativeRaf != null) {
+          cancelAnimationFrame(nativeRaf);
+          nativeRaf = null;
+        }
+        if (nativeStream) {
+          var stream = nativeStream;
+          stream.getTracks().forEach(function (t) { t.stop(); });
+          nativeStream = null;
+        }
+        nativePreview.srcObject = null;
+        nativeRunning = false;
+      }
+      if (html5Running && html5Qrcode) {
+        html5Running = false;
+        try {
+          await html5Qrcode.stop();
+        } catch (err) {
+          console.error("html5Qrcode.stop failed", err);
+        }
+      }
+    }
+
+    async function startNativePath() {
+      var formats = await window.BarcodeDetector.getSupportedFormats();
+      var hasEan13 = formats.indexOf("ean_13") !== -1;
+      var hasUpcE = formats.indexOf("upc_e") !== -1;
+      if (!hasEan13 || !hasUpcE) {
+        throw new Error("BarcodeDetector missing ean_13 or upc_e");
+      }
+      var detectorFormats = ["ean_13", "upc_e"];
+      if (formats.indexOf("upc_a") !== -1) detectorFormats.push("upc_a");
+      nativeDetector = new window.BarcodeDetector({ formats: detectorFormats });
+
+      readerEl.style.display = "none";
+      nativePreview.style.display = "block";
+      nativePreview.setAttribute("playsinline", "");
+      nativePreview.playsInline = true;
+      nativePreview.muted = true;
+
+      nativeStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+      nativePreview.srcObject = nativeStream;
+      await nativePreview.play();
+
+      nativeRunning = true;
+      nativeScanning = true;
+      activeCameraPath = "native";
+      setCameraStatus("Native camera scanning.");
+      nativeRaf = requestAnimationFrame(nativeTick);
+    }
+
+    async function startHtml5Path() {
+      if (nativeRunning || nativeStream) {
+        await cleanupNative();
+      }
+      nativePreview.style.display = "none";
+      readerEl.style.display = "block";
+      await loadHtml5Library();
+      if (html5Qrcode && html5Running) {
+        await html5Qrcode.stop();
+        html5Running = false;
+      }
+      if (!html5Qrcode) {
+        html5Qrcode = (function () {
+          var html5Qrcode = new Html5Qrcode("reader", { formatsToSupport: [Html5QrcodeSupportedFormats.UPC_A, Html5QrcodeSupportedFormats.UPC_E, Html5QrcodeSupportedFormats.EAN_13, Html5QrcodeSupportedFormats.EAN_8], verbose: false });
+          return html5Qrcode;
+        })();
+      }
+      await html5Qrcode.start({ facingMode: "environment" }, { fps: 10 }, onSuccess, onError);
+      html5Running = true;
+      activeCameraPath = "html5";
+      setCameraStatus("Camera scanning.");
+    }
+
+    async function startCamera() {
+      if (cameraBusy) return;
+      cameraBusy = true;
+      handlingScan = false;
+      setCameraStatus("Starting camera…");
+      try {
+        await stopCamera();
+        if (activeCameraPath === "html5") {
+          try {
+            await startHtml5Path();
+            return;
+          } catch (err) {
+            console.error("html5-qrcode path failed", err);
+            setCameraStatus("Camera unavailable. Type a barcode or use a demo product.");
+            return;
+          }
+        }
+        if (activeCameraPath === "native" || (activeCameraPath == null && window.BarcodeDetector)) {
+          try {
+            await startNativePath();
+            return;
+          } catch (err) {
+            console.error("Native BarcodeDetector path failed", err);
+            await cleanupNative();
+          }
+        }
+        try {
+          await startHtml5Path();
+        } catch (err) {
+          console.error("html5-qrcode path failed", err);
+          setCameraStatus("Camera unavailable. Type a barcode or use a demo product.");
+        }
+      } finally {
+        cameraBusy = false;
+      }
+    }
+
+    async function fetchOFF(barcode) {
+      var controller = new AbortController();
+      var timer = setTimeout(function () { controller.abort(); }, 5000);
+      var url = "https://world.openfoodfacts.org/api/v2/product/" + barcode + ".json?fields=product_name,brands,ingredients_text,image_url";
+      try {
+        var res = await fetch(url, { signal: controller.signal });
+        var data = await res.json();
+        if (data.status === 0 || data.status !== 1) {
+          console.error("OFF lookup failed: status", data.status);
+          return null;
+        }
+        return data.product || null;
+      } catch (err) {
+        console.error("OFF lookup failed", err);
+        return null;
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+
+    async function lookupAndShow(barcode, demoOnly) {
+      var code = normalizeBarcode(String(barcode));
+      var seed = findSeed(code);
+      if (seed) {
+        await hideScanView();
+        showResult(seed);
+        return;
+      }
+      if (demoOnly) {
+        await hideScanView();
+        showResult(makeUnknown(code));
+        return;
+      }
+      await hideScanView();
+      showResult(makeUnknown(code, { product: "Looking up…" }), { skipSave: true });
+      var off = await fetchOFF(code);
+      if (off) {
+        showResult(makeUnknown(code, {
+          product: off.product_name || "Unknown product",
+          brand: off.brands || null,
+          ingredients_text: off.ingredients_text || null,
+          image_url: off.image_url || null
+        }));
+      } else {
+        showResult(makeUnknown(code));
+      }
+    }
+
+    async function handleScannedValue(raw) {
+      if (handlingScan) return;
+      handlingScan = true;
+      try {
+        await lookupAndShow(String(raw), false);
+      } finally {
+        handlingScan = false;
+      }
+    }
+
+    async function scanAnother() {
+      clearResult();
+      resultView.style.display = "none";
+      rulesView.style.display = "none";
+      scanView.style.display = "block";
+      await startCamera();
+    }
+
+    document.getElementById("scan-another").addEventListener("click", function () {
+      scanAnother();
+    });
+    document.getElementById("start-camera").addEventListener("click", function () {
+      startCamera();
+    });
+    document.getElementById("rules-link").addEventListener("click", function () {
+      showRulesView();
+    });
+    document.getElementById("rules-back").addEventListener("click", function () {
+      showScanView();
+    });
+    document.getElementById("lookup-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var raw = document.getElementById("barcode-input").value;
+      if (!String(raw).replace(/\s+/g, "")) return;
+      lookupAndShow(String(raw), false);
+    });
+    document.querySelectorAll(".demo-grid button").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        lookupAndShow(String(btn.getAttribute("data-barcode")), true);
+      });
+    });
+
+    (function boot() {
+      var saved = readLastScan();
+      if (saved && saved.status) {
+        showResult(saved, { skipSave: true });
+        return;
+      }
+      scanView.style.display = "block";
+      startCamera();
+    })();
+  </script>
+</body>
+</html>
