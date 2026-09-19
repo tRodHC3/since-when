@@ -10,69 +10,62 @@
       margin: 0;
       padding: 0;
       min-height: 100%;
-      background: #0b0f14;
-      color: #f4f4f5;
+      background: #070707;
+      color: #f5f5f5;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.4;
+      line-height: 1.35;
     }
-    body {
-      padding-bottom: env(safe-area-inset-bottom);
-    }
-    button, input {
-      font: inherit;
-    }
+    button, input { font: inherit; }
     button {
-      min-height: 48px;
-      padding: 12px 16px;
+      min-height: 52px;
+      padding: 14px 16px;
       border: 0;
-      border-radius: 10px;
-      background: #e5e7eb;
+      border-radius: 0;
+      background: #f5f5f5;
       color: #111111;
-      font-weight: 700;
+      font-weight: 650;
       cursor: pointer;
     }
     button:focus-visible, input:focus-visible, a:focus-visible, summary:focus-visible {
-      outline: 3px solid #fbbf24;
+      outline: 2px solid #f5f5f5;
       outline-offset: 2px;
     }
-    a { color: #93c5fd; }
+    a { color: #d4d4d4; }
     h1, h2, p { margin: 0; }
 
-    #scan-view, #result-view, #rules-view { display: none; }
+    #scan-view, #result-view, #learn-view { display: none; }
+    #scan-view, #result-view, #learn-view {
+      padding-bottom: calc(72px + env(safe-area-inset-bottom));
+    }
 
     .topbar {
-      padding: 16px 16px 8px;
+      padding: 20px 20px 8px;
     }
     .topbar h1 {
-      font-size: 1.75rem;
-      letter-spacing: -0.03em;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #a3a3a3;
     }
-    .tagline {
-      margin-top: 6px;
-      color: #d4d4d8;
-      font-size: 0.95rem;
-    }
-    .panel {
-      padding: 12px 16px 24px;
-    }
+    .panel { padding: 8px 20px 24px; }
     .camera-stage {
       position: relative;
       background: #000;
-      min-height: 220px;
-      border-radius: 12px;
+      min-height: 240px;
       overflow: hidden;
     }
     #native-preview {
       width: 100%;
-      height: 42vh;
-      min-height: 220px;
+      height: 46vh;
+      min-height: 240px;
       object-fit: cover;
       display: none;
       background: #000;
     }
     #reader {
       display: none;
-      min-height: 220px;
+      min-height: 240px;
       width: 100%;
       background: #000;
     }
@@ -81,220 +74,240 @@
       height: auto !important;
     }
     #camera-status {
-      margin: 10px 0 0;
-      min-height: 1.4em;
-      color: #d4d4d8;
-      font-size: 0.9rem;
+      margin: 14px 0 0;
+      color: #a3a3a3;
+      font-size: 0.95rem;
+    }
+    #start-camera {
+      width: 100%;
+      margin-top: 12px;
+      background: #171717;
+      color: #f5f5f5;
     }
     .field-label {
       display: block;
-      margin: 18px 0 8px;
-      font-weight: 700;
+      margin: 28px 0 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a3a3a3;
     }
     #barcode-input {
       width: 100%;
-      min-height: 52px;
-      padding: 12px 14px;
-      border: 2px solid #e5e7eb;
-      border-radius: 10px;
-      background: #111827;
+      min-height: 56px;
+      padding: 12px 0;
+      border: 0;
+      border-bottom: 1px solid #262626;
+      border-radius: 0;
+      background: transparent;
       color: #fff;
-      font-size: 1.15rem;
-      letter-spacing: 0.04em;
+      font-size: 1.6rem;
+      letter-spacing: 0.06em;
     }
-    .row-actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 10px;
+    #lookup-form button[type="submit"] {
+      width: 100%;
+      margin-top: 12px;
     }
-    .row-actions button { width: 100%; }
     .demo-grid {
       display: grid;
-      gap: 10px;
-      margin-top: 10px;
+      gap: 8px;
+      margin-top: 8px;
     }
-    .demo-grid button { width: 100%; text-align: left; }
-    .text-link {
-      display: inline-block;
-      margin-top: 18px;
-      min-height: 44px;
-      padding: 10px 0;
-      color: #e5e7eb;
-      font-weight: 700;
-      text-decoration: underline;
+    .demo-grid button {
+      width: 100%;
+      text-align: left;
+      background: #141414;
+      color: #f5f5f5;
+      font-size: 1.05rem;
     }
 
     #status-block {
-      min-height: 30vh;
-      padding: 28px 16px 24px;
+      min-height: 36vh;
+      padding: 36px 20px 28px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      align-items: flex-start;
+      justify-content: flex-end;
     }
-    #status-block.marked { background: #15803d; color: #ffffff; }
-    #status-block.compatible { background: #0f766e; color: #ffffff; }
-    #status-block.animal-enzyme { background: #ca8a04; color: #111111; }
-    #status-block.not-compatible { background: #b91c1c; color: #ffffff; }
+    #status-block.halal { background: #15803d; color: #ffffff; }
+    #status-block.halal-no-mark { background: #0f766e; color: #ffffff; }
+    #status-block.animal-rennet { background: #ca8a04; color: #111111; }
+    #status-block.pork,
+    #status-block.not-halal { background: #b91c1c; color: #ffffff; }
     #status-block.unknown { background: #4b5563; color: #ffffff; }
 
     #test-badge {
       display: none;
-      margin-bottom: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #111111;
-      color: #fbbf24;
-      font-size: 0.8rem;
+      margin-bottom: 14px;
+      font-size: 0.75rem;
       font-weight: 800;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.16em;
     }
     #test-badge.is-visible { display: inline-block; }
     #fixture-note {
       display: none;
-      margin-top: 8px;
-      font-size: 0.9rem;
-      font-weight: 700;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      font-weight: 650;
     }
     #fixture-note.is-visible { display: block; }
     #status-word {
-      font-size: clamp(2rem, 11vw, 4.2rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
+      font-size: clamp(2.6rem, 13vw, 5rem);
+      font-weight: 750;
+      line-height: 0.95;
+      letter-spacing: -0.05em;
       text-transform: uppercase;
       word-break: break-word;
     }
     #product-line {
-      padding: 14px 16px 0;
-      font-size: 1.05rem;
-      font-weight: 700;
+      padding: 20px 20px 0;
+      font-size: 1.25rem;
+      font-weight: 600;
     }
-    #unknown-copy, #pack-line {
-      padding: 4px 16px 0;
-      color: #d4d4d8;
+    #unknown-copy {
+      padding: 6px 20px 0;
+      color: #a3a3a3;
     }
     #off-image-wrap {
       display: none;
-      padding: 12px 16px 0;
+      padding: 16px 20px 0;
     }
     #off-image-wrap.is-visible { display: block; }
     #off-image {
-      width: 96px;
-      height: 96px;
+      width: 72px;
+      height: 72px;
       object-fit: cover;
-      border-radius: 8px;
-      background: #111827;
+      background: #171717;
     }
     #why {
-      margin: 16px;
-      padding: 4px 12px 12px;
-      border: 1px solid #374151;
-      border-radius: 10px;
-      background: #111827;
+      margin: 20px;
+      padding: 0;
+      border: 0;
+      background: transparent;
     }
     #why summary {
       min-height: 48px;
       display: flex;
       align-items: center;
-      font-weight: 800;
+      font-size: 1.15rem;
+      font-weight: 650;
       cursor: pointer;
     }
-    .why-row {
-      margin-top: 10px;
-      font-size: 0.95rem;
-    }
+    .why-row { margin-top: 12px; font-size: 1rem; color: #d4d4d4; }
     .why-row strong {
       display: block;
-      color: #e5e7eb;
-      margin-bottom: 2px;
+      color: #a3a3a3;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
     }
     #callout {
       display: none;
-      margin: 0 16px 12px;
-      padding: 12px 14px;
-      background: #1f2937;
-      color: #fff;
-      border-left: 4px solid #fbbf24;
-      border-radius: 0 8px 8px 0;
-      font-weight: 700;
+      margin: 0 20px 16px;
+      padding: 0;
+      color: #f5f5f5;
+      font-size: 1.15rem;
+      font-weight: 600;
     }
     #callout.is-visible { display: block; }
-    #history {
-      padding: 0 16px 16px;
-    }
+    #history { padding: 8px 20px 16px; }
     #history h2 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a3a3a3;
+      margin-bottom: 12px;
     }
-    .timeline {
-      display: grid;
-      gap: 10px;
-    }
-    .event-row {
-      padding: 12px;
-      background: #111827;
-      border-radius: 10px;
-      border: 1px solid #374151;
-    }
-    .event-date {
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
+    .timeline { display: grid; gap: 18px; }
+    .event-row { padding: 0; background: transparent; }
+    .event-date { font-size: 1.2rem; font-weight: 650; margin-bottom: 4px; }
     .event-field {
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-size: 0.75rem;
-      color: #d4d4d8;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      color: #a3a3a3;
     }
-    .muted { color: #a1a1aa; }
-    .empty-history { color: #a1a1aa; }
+    .muted { color: #737373; }
+    .empty-history { color: #737373; }
     .result-footer {
-      margin: 8px 16px 16px;
-      padding-top: 12px;
-      border-top: 1px solid #374151;
-      color: #d4d4d8;
-      font-size: 0.9rem;
+      margin: 8px 20px 16px;
+      color: #737373;
+      font-size: 0.85rem;
     }
     #scan-another {
       display: block;
-      width: calc(100% - 32px);
-      margin: 0 16px 24px;
-      background: #f4f4f5;
+      width: calc(100% - 40px);
+      margin: 0 20px 12px;
     }
-    .rules-list {
-      margin: 12px 0 0;
-      padding-left: 1.15rem;
+
+    #learn-view { padding: 20px 20px calc(88px + env(safe-area-inset-bottom)); }
+    .learn-card {
+      padding: 28px 0;
+      border-bottom: 1px solid #1a1a1a;
     }
-    .rules-list li { margin: 10px 0; }
+    .learn-card h2 {
+      font-size: clamp(1.6rem, 7vw, 2.2rem);
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .learn-card p {
+      font-size: 1.1rem;
+      color: #d4d4d4;
+      max-width: 28rem;
+    }
+    .learn-card h2.halal { color: #15803d; }
+    .learn-card h2.halal-no-mark { color: #0f766e; }
+    .learn-card h2.animal-rennet { color: #ca8a04; }
+    .learn-card h2.pork { color: #b91c1c; }
+    .learn-card h2.unknown { color: #9ca3af; }
+
+    #tab-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #070707;
+      border-top: 1px solid #1a1a1a;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    #tab-bar button {
+      min-height: 56px;
+      background: transparent;
+      color: #737373;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    #tab-bar button.is-active { color: #f5f5f5; }
   </style>
 </head>
 <body>
   <section id="scan-view">
     <div class="topbar">
       <h1>Since When</h1>
-      <p class="tagline">Since when was this true, and when did the pack say so?</p>
     </div>
     <div class="panel">
       <div class="camera-stage">
         <video id="native-preview" playsinline muted autoplay></video>
         <div id="reader"></div>
       </div>
-      <p id="camera-status">Camera starts on this screen. If it is blocked, type a barcode or use a demo product.</p>
+      <p id="camera-status">Type a barcode if the camera is blocked.</p>
       <button id="start-camera" type="button">Start camera</button>
 
       <form id="lookup-form">
-        <label class="field-label" for="barcode-input">Type a UPC or EAN</label>
+        <label class="field-label" for="barcode-input">UPC / EAN</label>
         <input id="barcode-input" type="text" inputmode="numeric" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
-        <div class="row-actions">
-          <button type="submit">Look up</button>
-          <button id="rules-link" type="button">Rules of thumb</button>
-        </div>
+        <button type="submit">Look up</button>
       </form>
 
-      <p class="field-label">Demo products</p>
+      <p class="field-label">Demo</p>
       <div class="demo-grid">
         <button type="button" data-barcode="000000000001">Tillamook cheddar</button>
         <button type="button" data-barcode="000000000002">Maker's Reserve 10-Year</button>
@@ -327,21 +340,40 @@
     <button id="scan-another" type="button">Scan another</button>
   </section>
 
-  <section id="rules-view">
+  <section id="learn-view">
     <div class="topbar">
-      <h1>Rules of thumb</h1>
+      <h1>Learn</h1>
     </div>
-    <div class="panel">
-      <ul class="rules-list">
-        <li>Pork, bacon, lard, pork gelatin, wine or beer as an ingredient → NOT COMPATIBLE</li>
-        <li>Animal rennet or unspecified enzymes in cheese with no source → ANIMAL ENZYME. Do not guess slaughter status.</li>
-        <li>Microbial / FPC / vegetable rennet with a cited manufacturer or certifier statement → COMPATIBLE for that SKU after effective_on. MARKED only if the pack logo is sourced.</li>
-        <li>Tillamook cheddar is not Maker's Reserve. Tillamook cheese is not Rocky Road.</li>
-        <li>These rules are explanatory text. Unknown items stay UNKNOWN.</li>
-      </ul>
-      <button id="rules-back" type="button">Back to scan</button>
-    </div>
+    <article class="learn-card">
+      <h2 class="halal">HALAL</h2>
+      <p>A certifier mark is on the pack. That mark means a religious standard was applied to this food. If you do not follow that standard, this is how you find it.</p>
+    </article>
+    <article class="learn-card">
+      <h2 class="halal-no-mark">HALAL • NO MARK</h2>
+      <p>The company says the product meets that standard. This record has no date for a logo on the box. You could buy it for years and never be told.</p>
+    </article>
+    <article class="learn-card">
+      <h2 class="animal-rennet">ANIMAL RENNET</h2>
+      <p>Rennet is the enzyme that turns milk into cheese. Animal rennet is taken from a slaughtered calf’s stomach. Dhabiha rules say that calf must be alive when the throat is cut. A prayer is part of the rite. Some plants stun first. Some do not. The source does not say which. If you do not want a religious slaughter in your cheese, this is the SKU to skip.</p>
+    </article>
+    <article class="learn-card">
+      <h2 class="pork">PORK</h2>
+      <p>Pork is in the product, or the company says it is not certified. Rocky Road uses pork gelatin in the marshmallows.</p>
+    </article>
+    <article class="learn-card">
+      <h2 class="unknown">UNKNOWN</h2>
+      <p>No source. Do not guess.</p>
+    </article>
+    <article class="learn-card">
+      <h2>Slaughter</h2>
+      <p>Dhabiha is the slaughter rule: throat cut while the animal is alive, invocation said over it. That is a religious requirement, not a USDA flavor grade. Not every marked product is meat. Lab-enzyme cheddar is a certification claim. Animal-rennet cheddar is a slaughtered calf. This app prints the source, not a fatwa and not a speech.</p>
+    </article>
   </section>
+
+  <nav id="tab-bar">
+    <button type="button" id="tab-scan" class="is-active">Scan</button>
+    <button type="button" id="tab-learn">Learn</button>
+  </nav>
 
   <script>
     var SEED = [
@@ -350,7 +382,7 @@
         "barcodes": ["000000000001"],
         "brand": "Tillamook",
         "product": "Cheddar (standard block / slices / shreds, not Maker's Reserve)",
-        "status": "COMPATIBLE",
+        "status": "HALAL • NO MARK",
         "fixture": false,
         "pack_claim": "Manufacturer states majority of cheeses are halal certified; check pack for symbol",
         "enzyme": "FPC",
@@ -382,7 +414,7 @@
         "barcodes": ["000000000002"],
         "brand": "Tillamook",
         "product": "Maker's Reserve 10-Year Extra Sharp Cheddar",
-        "status": "ANIMAL ENZYME",
+        "status": "ANIMAL RENNET",
         "fixture": false,
         "pack_claim": "Company recommends this product for people who want animal rennet",
         "enzyme": "animal",
@@ -414,7 +446,7 @@
         "barcodes": ["000000000003"],
         "brand": "Tillamook",
         "product": "Rocky Road ice cream",
-        "status": "NOT COMPATIBLE",
+        "status": "PORK",
         "fixture": false,
         "pack_claim": "Ice cream products are not certified halal",
         "enzyme": null,
@@ -446,7 +478,7 @@
         "barcodes": ["000000000004"],
         "brand": "Demo",
         "product": "Test fixture only — not a real SKU",
-        "status": "MARKED",
+        "status": "HALAL",
         "fixture": true,
         "pack_claim": "Synthetic pack mark for UI testing",
         "enzyme": "FPC",
@@ -459,7 +491,7 @@
             "old_value": "formulation already compatible",
             "new_value": "visible mark added later",
             "source_url": "https://example.invalid/fixture",
-            "notes": "UI fixture to exercise MARKED and labeled_on > effective_on. Not a real product."
+            "notes": "UI fixture to exercise HALAL and labeled_on > effective_on. Not a real product."
           }
         ]
       },
@@ -477,7 +509,7 @@
     ];
 
     var STORAGE_KEY = "sinceWhen.lastScan";
-    var STATUS_CLASSES = ["marked", "compatible", "animal-enzyme", "not-compatible", "unknown"];
+    var STATUS_CLASSES = ["halal", "halal-no-mark", "animal-rennet", "pork", "not-halal", "unknown"];
 
     var html5Qrcode;
     var activeCameraPath = null;
@@ -493,13 +525,33 @@
 
     var scanView = document.getElementById("scan-view");
     var resultView = document.getElementById("result-view");
-    var rulesView = document.getElementById("rules-view");
+    var learnView = document.getElementById("learn-view");
+    var tabScan = document.getElementById("tab-scan");
+    var tabLearn = document.getElementById("tab-learn");
     var nativePreview = document.getElementById("native-preview");
     var readerEl = document.getElementById("reader");
     var cameraStatus = document.getElementById("camera-status");
 
+    function normalizeStatus(status) {
+      if (status === "MARKED" || status === "ON THE BOX") return "HALAL";
+      if (status === "COMPATIBLE" || status === "SAID HALAL") return "HALAL • NO MARK";
+      if (status === "ANIMAL ENZYME") return "ANIMAL RENNET";
+      if (status === "NOT COMPATIBLE") return "NOT HALAL";
+      return status || "UNKNOWN";
+    }
+
     function toKebab(status) {
-      return String(status || "UNKNOWN").toLowerCase().replace(/ /g, "-");
+      return String(normalizeStatus(status)).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    }
+
+    function setScanTabActive() {
+      tabScan.classList.add("is-active");
+      tabLearn.classList.remove("is-active");
+    }
+
+    function setLearnTabActive() {
+      tabLearn.classList.add("is-active");
+      tabScan.classList.remove("is-active");
     }
 
     function escapeHtml(value) {
@@ -673,7 +725,7 @@
 
     function renderResult(product) {
       currentResult = product;
-      var status = product.status || "UNKNOWN";
+      var status = normalizeStatus(product.status);
       var kebab = toKebab(status);
       var statusBlock = document.getElementById("status-block");
       var i;
@@ -692,7 +744,7 @@
       document.getElementById("product-line").textContent = brand ? (name + " · " + brand) : name;
 
       var copy = "";
-      if (status === "UNKNOWN") copy = "No reliable source.";
+      if (status === "UNKNOWN") copy = "No source. Do not guess.";
       document.getElementById("unknown-copy").textContent = copy;
 
       var imgWrap = document.getElementById("off-image-wrap");
@@ -760,7 +812,8 @@
       renderResult(product);
       resultView.style.display = "block";
       scanView.style.display = "none";
-      rulesView.style.display = "none";
+      learnView.style.display = "none";
+      setScanTabActive();
       if (!options.skipSave) saveLastScan(product);
     }
 
@@ -770,16 +823,24 @@
     }
 
     async function showScanView() {
+      setScanTabActive();
+      learnView.style.display = "none";
+      if (currentResult) {
+        resultView.style.display = "block";
+        scanView.style.display = "none";
+        await stopCamera();
+        return;
+      }
       resultView.style.display = "none";
-      rulesView.style.display = "none";
       scanView.style.display = "block";
       await startCamera();
     }
 
-    function showRulesView() {
+    function showLearnView() {
+      setLearnTabActive();
       resultView.style.display = "none";
       scanView.style.display = "none";
-      rulesView.style.display = "block";
+      learnView.style.display = "block";
       stopCamera();
     }
 
@@ -1007,8 +1068,9 @@
     async function scanAnother() {
       clearResult();
       resultView.style.display = "none";
-      rulesView.style.display = "none";
+      learnView.style.display = "none";
       scanView.style.display = "block";
+      setScanTabActive();
       await startCamera();
     }
 
@@ -1018,11 +1080,11 @@
     document.getElementById("start-camera").addEventListener("click", function () {
       startCamera();
     });
-    document.getElementById("rules-link").addEventListener("click", function () {
-      showRulesView();
-    });
-    document.getElementById("rules-back").addEventListener("click", function () {
+    tabScan.addEventListener("click", function () {
       showScanView();
+    });
+    tabLearn.addEventListener("click", function () {
+      showLearnView();
     });
     document.getElementById("lookup-form").addEventListener("submit", function (event) {
       event.preventDefault();
