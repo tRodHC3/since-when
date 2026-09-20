@@ -30,10 +30,10 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 
 | Button | Barcode | Status |
 | --- | --- | --- |
-| Tillamook cheddar | `000000000001` | COMPATIBLE |
-| Maker's Reserve 10-Year | `000000000002` | ANIMAL ENZYME |
-| Rocky Road | `000000000003` | NOT COMPATIBLE |
-| Marked test fixture | `000000000004` | MARKED (TEST badge; not saved) |
+| Tillamook cheddar | `000000000001` | HALAL • NO MARK |
+| Maker's Reserve 10-Year | `000000000002` | ANIMAL RENNET |
+| Rocky Road | `000000000003` | PORK |
+| Marked test fixture | `000000000004` | HALAL (TEST badge; not saved) |
 | Unknown barcode | `000000000099` | UNKNOWN |
 
 ## Add one event row
@@ -57,8 +57,9 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 }
 ```
 
-6. Do not invent dates or verdicts. Change `product.status` only when a source supports it. Status must be one of `MARKED`, `COMPATIBLE`, `ANIMAL ENZYME`, `NOT COMPATIBLE`, `UNKNOWN`.
+6. Do not invent dates or verdicts. Change `product.status` only when a source supports it. Status must be one of `HALAL`, `HALAL • NO MARK`, `ANIMAL RENNET`, `PORK`, `UNKNOWN`.
 7. Add the barcode to `barcodes` only for that SKU. Do not copy another SKU's status onto a different barcode.
+8. Barcodes are stored as the 12-digit UPC-A printed on the pack, because a 13-digit EAN-13 scan is normalized down to 12 before lookup.
 
 ## Lookup order
 

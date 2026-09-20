@@ -49,6 +49,32 @@
       color: #a3a3a3;
     }
     .panel { padding: 8px 20px 24px; }
+    #last-scan {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    #last-scan[hidden] { display: none; }
+    #last-scan-open {
+      flex: 1;
+      min-height: 44px;
+      padding: 10px 12px;
+      background: #141414;
+      color: #d4d4d4;
+      text-align: left;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    #last-scan-clear {
+      width: 44px;
+      min-height: 44px;
+      padding: 0;
+      background: #141414;
+      color: #a3a3a3;
+      font-size: 1.2rem;
+      font-weight: 650;
+    }
     .camera-stage {
       position: relative;
       background: #000;
@@ -205,13 +231,21 @@
     }
     #callout {
       display: none;
-      margin: 0 20px 16px;
-      padding: 0;
+      margin: 16px 20px 0;
+      padding: 12px 14px;
+      border-left: 4px solid #4b5563;
+      background: #101010;
       color: #f5f5f5;
       font-size: 1.15rem;
       font-weight: 600;
     }
     #callout.is-visible { display: block; }
+    #callout.halal { border-left-color: #15803d; }
+    #callout.halal-no-mark { border-left-color: #0f766e; }
+    #callout.animal-rennet { border-left-color: #ca8a04; }
+    #callout.pork,
+    #callout.not-halal { border-left-color: #b91c1c; }
+    #callout.unknown { border-left-color: #4b5563; }
     #history { padding: 8px 20px 16px; }
     #history h2 {
       font-size: 0.75rem;
@@ -224,11 +258,14 @@
     .event-row { padding: 0; background: transparent; }
     .event-date { font-size: 1.2rem; font-weight: 650; margin-bottom: 4px; }
     .event-field {
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.72rem;
-      color: #a3a3a3;
+      text-transform: lowercase;
+      letter-spacing: 0.04em;
+      font-size: 0.95rem;
+      font-weight: 650;
+      color: #d4d4d4;
+      margin-bottom: 4px;
     }
+    .event-undated { color: #737373; font-size: 1rem; margin-bottom: 4px; }
     .muted { color: #737373; }
     .empty-history { color: #737373; }
     .result-footer {
@@ -263,7 +300,9 @@
     .learn-card h2.halal-no-mark { color: #0f766e; }
     .learn-card h2.animal-rennet { color: #ca8a04; }
     .learn-card h2.pork { color: #b91c1c; }
+    /* deliberate text-on-dark variant of the unknown token (#4b5563 is unreadable on #070707) */
     .learn-card h2.unknown { color: #9ca3af; }
+    .learn-card h2.neutral { color: #f5f5f5; }
 
     #tab-bar {
       position: fixed;
@@ -294,6 +333,10 @@
       <h1>Since When</h1>
     </div>
     <div class="panel">
+      <div id="last-scan" hidden>
+        <button type="button" id="last-scan-open"></button>
+        <button type="button" id="last-scan-clear" aria-label="Clear last scan">×</button>
+      </div>
       <div class="camera-stage">
         <video id="native-preview" playsinline muted autoplay></video>
         <div id="reader"></div>
@@ -325,13 +368,13 @@
       <p id="fixture-note">Test fixture only. Not a real grocery SKU.</p>
     </div>
     <p id="product-line"></p>
+    <div id="callout"></div>
     <p id="unknown-copy"></p>
     <div id="off-image-wrap"><img id="off-image" alt=""></div>
-    <details id="why">
+    <details id="why" open>
       <summary>Why</summary>
       <div id="why-body"></div>
     </details>
-    <div id="callout"></div>
     <div id="history">
       <h2>History</h2>
       <div id="timeline" class="timeline"></div>
@@ -365,7 +408,19 @@
       <p>No source. Do not guess.</p>
     </article>
     <article class="learn-card">
-      <h2>Slaughter</h2>
+      <h2 class="neutral">Two dates</h2>
+      <p>One date is when the recipe changed. The other is when the box started saying so. They are usually not the same date. The gap is the part nobody tells you.</p>
+    </article>
+    <article class="learn-card">
+      <h2 class="neutral">Who said it</h2>
+      <p>A company FAQ is not a certifier mark. A certifier mark is not a government grade. This app prints which one it found, and links it.</p>
+    </article>
+    <article class="learn-card">
+      <h2 class="neutral">Date unspecified</h2>
+      <p>The record has no date for that change. The app prints that instead of guessing. A missing date is a fact about the record, not about the food.</p>
+    </article>
+    <article class="learn-card">
+      <h2 class="neutral">Slaughter</h2>
       <p>Dhabiha is the slaughter rule: throat cut while the animal is alive, invocation said over it. That is a religious requirement, not a USDA flavor grade. Not every marked product is meat. Lab-enzyme cheddar is a certification claim. Animal-rennet cheddar is a slaughtered calf. This app prints the source, not a fatwa and not a speech.</p>
     </article>
   </section>
@@ -508,7 +563,7 @@
       }
     ];
 
-    var STORAGE_KEY = "sinceWhen.lastScan";
+    var STORAGE_KEY = "sinceWhen.lastScan.v2";
     var STATUS_CLASSES = ["halal", "halal-no-mark", "animal-rennet", "pork", "not-halal", "unknown"];
 
     var html5Qrcode;
@@ -522,6 +577,7 @@
     var handlingScan = false;
     var currentResult = null;
     var cameraBusy = false;
+    var scanToken = 0;
 
     var scanView = document.getElementById("scan-view");
     var resultView = document.getElementById("result-view");
@@ -610,8 +666,7 @@
         enzyme: "unknown",
         events: [],
         ingredients_text: extra.ingredients_text || null,
-        image_url: extra.image_url || null,
-        copy: "No reliable source."
+        image_url: extra.image_url || null
       };
     }
 
@@ -630,8 +685,18 @@
       return best;
     }
 
+    function labeledOnlyEvent(events) {
+      var i;
+      if (!events) return null;
+      for (i = 0; i < events.length; i += 1) {
+        var ev = events[i];
+        if (ev && ev.labeled_on != null && ev.labeled_on !== "") return ev;
+      }
+      return null;
+    }
+
     function calloutText(product) {
-      var ev = earliestEffectiveEvent(product.events || []);
+      var ev = earliestEffectiveEvent(product.events || []) || labeledOnlyEvent(product.events || []);
       if (!ev) return null;
       var labeled = ev.labeled_on;
       var effective = ev.effective_on;
@@ -642,6 +707,9 @@
       }
       if (effectiveIsDate && (labeled == null || labeled === "")) {
         return "No pack-mark date in record.";
+      }
+      if (labeledIsDate && !effectiveIsDate) {
+        return "Pack-mark date on record. No date for when the recipe changed.";
       }
       return null;
     }
@@ -675,6 +743,14 @@
       }
     }
 
+    function storageRemove() {
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch (err) {
+        console.error("localStorage remove failed", err);
+      }
+    }
+
     function storageSet(value) {
       try {
         localStorage.setItem(STORAGE_KEY, value);
@@ -683,9 +759,15 @@
       }
     }
 
-    function saveLastScan(product) {
+    function saveLastScan(product, barcode) {
       if (!product || product.fixture === true) return;
-      storageSet(JSON.stringify(product));
+      var code = barcode == null ? (product.barcodes && product.barcodes[0]) : barcode;
+      if (!code) return;
+      storageSet(JSON.stringify({
+        barcode: String(code),
+        status: String(normalizeStatus(product.status)),
+        product: String(product.product || "Unknown product")
+      }));
     }
 
     function readLastScan() {
@@ -693,8 +775,10 @@
       if (!raw) return null;
       try {
         var parsed = JSON.parse(raw);
-        if (parsed && parsed.fixture === true) return null;
-        return parsed;
+        if (!parsed || parsed.fixture === true) return null;
+        if (typeof parsed.barcode !== "string" || typeof parsed.status !== "string" || typeof parsed.product !== "string") return null;
+        if (!parsed.barcode) return null;
+        return { barcode: parsed.barcode, status: parsed.status, product: parsed.product };
       } catch (err) {
         console.error("localStorage parse failed", err);
         return null;
@@ -717,9 +801,12 @@
       document.getElementById("off-image-wrap").classList.remove("is-visible");
       document.getElementById("off-image").removeAttribute("src");
       document.getElementById("why-body").innerHTML = "";
-      document.getElementById("why").open = false;
+      document.getElementById("why").open = true;
       document.getElementById("callout").textContent = "";
       document.getElementById("callout").classList.remove("is-visible");
+      for (i = 0; i < STATUS_CLASSES.length; i += 1) {
+        document.getElementById("callout").classList.remove(STATUS_CLASSES[i]);
+      }
       document.getElementById("timeline").innerHTML = "";
     }
 
@@ -766,13 +853,17 @@
       if (product.pack_claim) {
         whyHtml += "<div class=\"why-row\"><strong>Pack / manufacturer claim</strong>" + escapeHtml(product.pack_claim) + "</div>";
       }
-      whyHtml += "<div class=\"why-row\"><strong>effective_on</strong>" + escapeHtml(formatDate(datesEv ? datesEv.effective_on : null)) + "</div>";
-      whyHtml += "<div class=\"why-row\"><strong>labeled_on</strong>" + escapeHtml(formatDate(datesEv ? datesEv.labeled_on : null)) + "</div>";
-      whyHtml += "<div class=\"why-row\"><strong>verified_on</strong>" + escapeHtml(formatDate(datesEv ? datesEv.verified_on : null)) + "</div>";
+      whyHtml += "<div class=\"why-row\"><strong>Recipe changed</strong>" + escapeHtml(formatDate(datesEv ? datesEv.effective_on : null)) + "</div>";
+      whyHtml += "<div class=\"why-row\"><strong>Box said so</strong>" + escapeHtml(formatDate(datesEv ? datesEv.labeled_on : null)) + "</div>";
+      whyHtml += "<div class=\"why-row\"><strong>Source checked</strong>" + escapeHtml(formatDate(datesEv ? datesEv.verified_on : null)) + "</div>";
       document.getElementById("why-body").innerHTML = whyHtml;
 
       var banner = calloutText(product);
       var callout = document.getElementById("callout");
+      for (i = 0; i < STATUS_CLASSES.length; i += 1) {
+        callout.classList.remove(STATUS_CLASSES[i]);
+      }
+      callout.classList.add(kebab);
       if (banner) {
         callout.textContent = banner;
         callout.classList.add("is-visible");
@@ -790,11 +881,17 @@
         for (i = 0; i < events.length; i += 1) {
           var ev = events[i];
           var href = ev.source_url ? String(ev.source_url) : "";
+          var dated = ev.effective_on != null && ev.effective_on !== "";
           html += "<article class=\"event-row\">";
-          html += "<div class=\"event-date\">" + escapeHtml(formatDate(ev.effective_on)) + "</div>";
-          html += "<div class=\"event-field\">" + escapeHtml(formatValue(ev.field)) + "</div>";
-          html += "<div>old: " + escapeHtml(formatValue(ev.old_value)) + "</div>";
-          html += "<div>new: " + escapeHtml(formatValue(ev.new_value)) + "</div>";
+          if (dated) {
+            html += "<div class=\"event-date\">" + escapeHtml(formatDate(ev.effective_on)) + "</div>";
+            html += "<div class=\"event-field\">" + escapeHtml(formatValue(ev.field)) + "</div>";
+          } else {
+            html += "<div class=\"event-field\">" + escapeHtml(formatValue(ev.field)) + "</div>";
+            html += "<div class=\"event-undated\">" + escapeHtml(formatDate(ev.effective_on)) + "</div>";
+          }
+          html += "<div>was " + escapeHtml(formatValue(ev.old_value)) + "</div>";
+          html += "<div>now " + escapeHtml(formatValue(ev.new_value)) + "</div>";
           if (href) {
             html += "<div><a href=\"" + escapeHtml(href) + "\" target=\"_blank\" rel=\"noopener noreferrer\">Source</a></div>";
           }
@@ -814,7 +911,7 @@
       scanView.style.display = "none";
       learnView.style.display = "none";
       setScanTabActive();
-      if (!options.skipSave) saveLastScan(product);
+      if (!options.skipSave) saveLastScan(product, options.barcode);
     }
 
     async function hideScanView() {
@@ -823,25 +920,21 @@
     }
 
     async function showScanView() {
+      scanToken += 1;
       setScanTabActive();
       learnView.style.display = "none";
-      if (currentResult) {
-        resultView.style.display = "block";
-        scanView.style.display = "none";
-        await stopCamera();
-        return;
-      }
       resultView.style.display = "none";
       scanView.style.display = "block";
       await startCamera();
     }
 
-    function showLearnView() {
+    async function showLearnView() {
+      scanToken += 1;
+      await stopCamera();
       setLearnTabActive();
       resultView.style.display = "none";
       scanView.style.display = "none";
       learnView.style.display = "block";
-      stopCamera();
     }
 
     function loadHtml5Library() {
@@ -971,7 +1064,7 @@
     }
 
     async function startCamera() {
-      if (cameraBusy) return;
+      if (cameraBusy || nativeRunning || html5Running) return;
       cameraBusy = true;
       handlingScan = false;
       setCameraStatus("Starting camera…");
@@ -1014,7 +1107,7 @@
       try {
         var res = await fetch(url, { signal: controller.signal });
         var data = await res.json();
-        if (data.status === 0 || data.status !== 1) {
+        if (data.status !== 1) {
           console.error("OFF lookup failed: status", data.status);
           return null;
         }
@@ -1028,30 +1121,35 @@
     }
 
     async function lookupAndShow(barcode, demoOnly) {
+      var myToken = ++scanToken;
       var code = normalizeBarcode(String(barcode));
       var seed = findSeed(code);
       if (seed) {
         await hideScanView();
-        showResult(seed);
+        if (myToken !== scanToken) return;
+        showResult(seed, { barcode: code });
         return;
       }
       if (demoOnly) {
         await hideScanView();
-        showResult(makeUnknown(code));
+        if (myToken !== scanToken) return;
+        showResult(makeUnknown(code), { barcode: code });
         return;
       }
       await hideScanView();
+      if (myToken !== scanToken) return;
       showResult(makeUnknown(code, { product: "Looking up…" }), { skipSave: true });
       var off = await fetchOFF(code);
+      if (myToken !== scanToken) return;
       if (off) {
         showResult(makeUnknown(code, {
           product: off.product_name || "Unknown product",
           brand: off.brands || null,
           ingredients_text: off.ingredients_text || null,
           image_url: off.image_url || null
-        }));
+        }), { barcode: code });
       } else {
-        showResult(makeUnknown(code));
+        showResult(makeUnknown(code), { barcode: code });
       }
     }
 
@@ -1066,6 +1164,7 @@
     }
 
     async function scanAnother() {
+      scanToken += 1;
       clearResult();
       resultView.style.display = "none";
       learnView.style.display = "none";
@@ -1098,12 +1197,25 @@
       });
     });
 
-    (function boot() {
-      var saved = readLastScan();
-      if (saved && saved.status) {
-        showResult(saved, { skipSave: true });
+    function renderLastScanLine(saved) {
+      var wrap = document.getElementById("last-scan");
+      if (!saved) {
+        wrap.hidden = true;
         return;
       }
+      document.getElementById("last-scan-open").textContent = "Last scan · " + saved.status + " · " + saved.product;
+      wrap.hidden = false;
+      document.getElementById("last-scan-open").addEventListener("click", function () {
+        lookupAndShow(saved.barcode, false);
+      });
+      document.getElementById("last-scan-clear").addEventListener("click", function () {
+        storageRemove();
+        wrap.parentNode.removeChild(wrap);
+      });
+    }
+
+    (function boot() {
+      renderLastScanLine(readLastScan());
       scanView.style.display = "block";
       startCamera();
     })();
