@@ -226,7 +226,6 @@
       color: #a3a3a3;
       font-size: 0.75rem;
       letter-spacing: 0.1em;
-      text-transform: uppercase;
       margin-bottom: 4px;
     }
     #callout {
@@ -578,6 +577,7 @@
     var currentResult = null;
     var cameraBusy = false;
     var scanToken = 0;
+    var lastScanSaved = null;
 
     var scanView = document.getElementById("scan-view");
     var resultView = document.getElementById("result-view");
@@ -686,13 +686,18 @@
     }
 
     function labeledOnlyEvent(events) {
+      var best = null;
       var i;
       if (!events) return null;
       for (i = 0; i < events.length; i += 1) {
         var ev = events[i];
-        if (ev && ev.labeled_on != null && ev.labeled_on !== "") return ev;
+        if (ev && ev.labeled_on != null && ev.labeled_on !== "") {
+          if (best == null || String(ev.labeled_on) < String(best.labeled_on)) {
+            best = ev;
+          }
+        }
       }
-      return null;
+      return best;
     }
 
     function calloutText(product) {
@@ -926,6 +931,7 @@
       resultView.style.display = "none";
       scanView.style.display = "block";
       await startCamera();
+      renderLastScanLine(readLastScan());
     }
 
     async function showLearnView() {
@@ -1171,6 +1177,7 @@
       scanView.style.display = "block";
       setScanTabActive();
       await startCamera();
+      renderLastScanLine(readLastScan());
     }
 
     document.getElementById("scan-another").addEventListener("click", function () {
@@ -1199,23 +1206,29 @@
 
     function renderLastScanLine(saved) {
       var wrap = document.getElementById("last-scan");
-      if (!saved) {
+      var open = document.getElementById("last-scan-open");
+      lastScanSaved = saved || null;
+      if (!lastScanSaved) {
+        open.textContent = "";
         wrap.hidden = true;
         return;
       }
-      document.getElementById("last-scan-open").textContent = "Last scan · " + saved.status + " · " + saved.product;
+      open.textContent = "Last scan · " + lastScanSaved.status + " · " + lastScanSaved.product;
       wrap.hidden = false;
-      document.getElementById("last-scan-open").addEventListener("click", function () {
-        lookupAndShow(saved.barcode, false);
-      });
-      document.getElementById("last-scan-clear").addEventListener("click", function () {
-        storageRemove();
-        wrap.parentNode.removeChild(wrap);
-      });
     }
+
+    document.getElementById("last-scan-open").addEventListener("click", function () {
+      if (!lastScanSaved) return;
+      lookupAndShow(lastScanSaved.barcode, false);
+    });
+    document.getElementById("last-scan-clear").addEventListener("click", function () {
+      storageRemove();
+      renderLastScanLine(null);
+    });
 
     (function boot() {
       renderLastScanLine(readLastScan());
+      try { localStorage.removeItem("sinceWhen.lastScan"); } catch (e) {}
       scanView.style.display = "block";
       startCamera();
     })();
