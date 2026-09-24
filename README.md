@@ -1,5 +1,7 @@
 # Since When
 
+Work in progress. Most real barcodes stay UNKNOWN until a source is accepted.
+
 A local, single-file barcode lookup. Scan or type a UPC/EAN and see one status word plus a dated source history. Seeded products win over Open Food Facts. Unseeded barcodes stay **UNKNOWN**.
 
 ## Open the app
@@ -22,7 +24,7 @@ py -m http.server 8000
 
 Then open [http://localhost:8000](http://localhost:8000).
 
-Typed lookup and the five demo buttons work without a camera.
+Typed lookup and the six demo buttons work without a camera.
 
 ## Demo buttons
 
@@ -31,6 +33,7 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 | Button | Barcode | Status |
 | --- | --- | --- |
 | Tillamook cheddar | `000000000001` | HALAL • NO MARK |
+| Mozzarella shreds | `072830011211` | HALAL (real UPC from the pack) |
 | Maker's Reserve 10-Year | `000000000002` | ANIMAL RENNET |
 | Rocky Road | `000000000003` | PORK |
 | Marked test fixture | `000000000004` | HALAL (TEST badge; not saved) |
