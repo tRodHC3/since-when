@@ -156,8 +156,9 @@
       align-items: flex-start;
       justify-content: flex-end;
     }
-    #status-block.halal { background: #15803d; color: #ffffff; }
-    #status-block.halal-no-mark { background: #0f766e; color: #ffffff; }
+    #status-block.halal { background: #b91c1c; color: #ffffff; }
+    #status-block.halal-no-mark { background: #c2410c; color: #ffffff; }
+    #status-block.clear { background: #15803d; color: #ffffff; }
     #status-block.animal-rennet { background: #ca8a04; color: #111111; }
     #status-block.pork,
     #status-block.not-halal { background: #b91c1c; color: #ffffff; }
@@ -239,8 +240,9 @@
       font-weight: 600;
     }
     #callout.is-visible { display: block; }
-    #callout.halal { border-left-color: #15803d; }
-    #callout.halal-no-mark { border-left-color: #0f766e; }
+    #callout.halal { border-left-color: #b91c1c; }
+    #callout.halal-no-mark { border-left-color: #c2410c; }
+    #callout.clear { border-left-color: #15803d; }
     #callout.animal-rennet { border-left-color: #ca8a04; }
     #callout.pork,
     #callout.not-halal { border-left-color: #b91c1c; }
@@ -295,8 +297,9 @@
       color: #d4d4d4;
       max-width: 28rem;
     }
-    .learn-card h2.halal { color: #15803d; }
-    .learn-card h2.halal-no-mark { color: #0f766e; }
+    .learn-card h2.halal { color: #b91c1c; }
+    .learn-card h2.halal-no-mark { color: #c2410c; }
+    .learn-card h2.clear { color: #15803d; }
     .learn-card h2.animal-rennet { color: #ca8a04; }
     .learn-card h2.pork { color: #b91c1c; }
     /* deliberate text-on-dark variant of the unknown token (#4b5563 is unreadable on #070707) */
@@ -390,11 +393,11 @@
     </div>
     <article class="learn-card">
       <h2 class="halal">HALAL</h2>
-      <p>A certifier mark is on the pack. That mark means a religious standard was applied to this food. If you do not follow that standard, this is how you find it.</p>
+      <p>Red means stay away if you do not want a certified product. The mark is on the pack.</p>
     </article>
     <article class="learn-card">
       <h2 class="halal-no-mark">HALAL • NO MARK</h2>
-      <p>The company says the product meets that standard. This record has no date for a logo on the box. You could buy it for years and never be told.</p>
+      <p>Orange-red means the company or a certifier says it meets that standard, but this record has no dated pack logo.</p>
     </article>
     <article class="learn-card">
       <h2 class="animal-rennet">ANIMAL RENNET</h2>
@@ -407,6 +410,10 @@
     <article class="learn-card">
       <h2 class="unknown">UNKNOWN</h2>
       <p>No source. Do not guess.</p>
+    </article>
+    <article class="learn-card">
+      <h2 class="clear">CLEAR</h2>
+      <p>We looked at this pack. No halal mark and no sourced certification for this barcode. That is not a promise about every plant or every country.</p>
     </article>
     <article class="learn-card">
       <h2 class="neutral">Two dates</h2>
@@ -502,7 +509,7 @@
         "barcodes": ["049000555318"],
         "brand": "Sprite",
         "product": "Chill Cherry Lime 12 fl oz can",
-        "status": "UNKNOWN",
+        "status": "CLEAR",
         "fixture": false,
         "pack_claim": null,
         "enzyme": null,
@@ -515,7 +522,7 @@
             "old_value": null,
             "new_value": "No halal certification mark on this can.",
             "source_url": "https://smartlabel.coca-colaproductfacts.com/?Sprite-Chill-1PK-12.00-oz-Aluminum-Can&upc=049000555318",
-            "notes": "Pack inspected 2026-09-24. Recycle mark and SmartLabel only. OU kosher is not a halal verdict in this app."
+            "notes": "Pack inspected 2026-09-24. Recycle mark and SmartLabel only. OU kosher is not a halal verdict in this app. Inspected can, no halal mark, no sourced SKU certification. CLEAR means no cert found, not a religious ruling."
           }
         ]
       },
@@ -619,7 +626,7 @@
     ];
 
     var STORAGE_KEY = "sinceWhen.lastScan.v2";
-    var STATUS_CLASSES = ["halal", "halal-no-mark", "animal-rennet", "pork", "not-halal", "unknown"];
+    var STATUS_CLASSES = ["halal", "halal-no-mark", "clear", "animal-rennet", "pork", "not-halal", "unknown"];
 
     var html5Qrcode;
     var activeCameraPath = null;

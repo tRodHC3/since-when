@@ -34,7 +34,7 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 | --- | --- | --- |
 | Tillamook cheddar | `000000000001` | HALAL • NO MARK |
 | Mozzarella shreds | `072830011211` | HALAL (real UPC from the pack) |
-| Sprite Chill | `049000555318` | UNKNOWN (this UPC is real) |
+| Sprite Chill | `049000555318` | CLEAR (this UPC is real) |
 | Maker's Reserve 10-Year | `000000000002` | ANIMAL RENNET |
 | Rocky Road | `000000000003` | PORK |
 | Marked test fixture | `000000000004` | HALAL (TEST badge; not saved) |
@@ -61,7 +61,7 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 }
 ```
 
-6. Do not invent dates or verdicts. Change `product.status` only when a source supports it. Status must be one of `HALAL`, `HALAL • NO MARK`, `ANIMAL RENNET`, `PORK`, `UNKNOWN`.
+6. Do not invent dates or verdicts. Change `product.status` only when a source supports it. Status must be one of `HALAL`, `HALAL • NO MARK`, `CLEAR`, `ANIMAL RENNET`, `PORK`, `UNKNOWN`.
 7. Add the barcode to `barcodes` only for that SKU. Do not copy another SKU's status onto a different barcode.
 8. Barcodes are stored as the 12-digit UPC-A printed on the pack, because a 13-digit EAN-13 scan is normalized down to 12 before lookup.
 

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 0.4.0 — 2026-09-24
+- Inverted colors; HALAL/NO MARK are warnings; CLEAR is inspected with no cert; Sprite moved to CLEAR
+
 ## 0.3.1 — 2026-09-24
 - Sprite Chill Cherry Lime `049000555318` UNKNOWN from pack; no halal mark
 
