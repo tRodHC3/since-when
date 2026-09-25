@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 0.3.1 — 2026-09-24
+- Sprite Chill Cherry Lime `049000555318` UNKNOWN from pack; no halal mark
+
 ## 0.3.0 — 2026-09-23
 - First real pack UPC: Tillamook Farmstyle Shreds Mozzarella 8 oz `072830011211`
 - Status HALAL from IFANCA mark photographed on this bag

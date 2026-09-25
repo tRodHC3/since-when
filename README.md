@@ -24,7 +24,7 @@ py -m http.server 8000
 
 Then open [http://localhost:8000](http://localhost:8000).
 
-Typed lookup and the six demo buttons work without a camera.
+Typed lookup and the seven demo buttons work without a camera.
 
 ## Demo buttons
 
@@ -34,6 +34,7 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 | --- | --- | --- |
 | Tillamook cheddar | `000000000001` | HALAL • NO MARK |
 | Mozzarella shreds | `072830011211` | HALAL (real UPC from the pack) |
+| Sprite Chill | `049000555318` | UNKNOWN (this UPC is real) |
 | Maker's Reserve 10-Year | `000000000002` | ANIMAL RENNET |
 | Rocky Road | `000000000003` | PORK |
 | Marked test fixture | `000000000004` | HALAL (TEST badge; not saved) |
