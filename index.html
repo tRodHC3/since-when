@@ -401,7 +401,7 @@
     </article>
     <article class="learn-card">
       <h2 class="animal-rennet">ANIMAL RENNET</h2>
-      <p>Rennet is the enzyme that turns milk into cheese. Animal rennet is taken from a slaughtered calf’s stomach. Dhabiha rules say that calf must be alive when the throat is cut. A prayer is part of the rite. Some plants stun first. Some do not. The source does not say which. If you do not want a religious slaughter in your cheese, this is the SKU to skip.</p>
+      <p>Rennet is the enzyme that turns milk into cheese. Animal rennet comes from a slaughtered calf’s stomach. Dhabiha requires the calf alive when its throat is cut, with an invocation said. Some plants stun first, some don’t — the source doesn’t say which. Skip this SKU if you don’t want a religious slaughter in your cheese.</p>
     </article>
     <article class="learn-card">
       <h2 class="pork">PORK</h2>
@@ -627,6 +627,14 @@
 
     var STORAGE_KEY = "sinceWhen.lastScan.v2";
     var STATUS_CLASSES = ["halal", "halal-no-mark", "clear", "animal-rennet", "pork", "not-halal", "unknown"];
+    var STATUS_TAGLINES = {
+      "HALAL": "Mark on the pack. Stay away if you don't want that.",
+      "HALAL • NO MARK": "They say it's certified. The box didn't have to tell you.",
+      "CLEAR": "No mark on this pack. Drink it if you want.",
+      "PORK": "Pork is in this product.",
+      "ANIMAL RENNET": "Calf enzyme. Slaughter method not in this record.",
+      "UNKNOWN": "No source. Do not guess."
+    };
 
     var html5Qrcode;
     var activeCameraPath = null;
@@ -898,9 +906,7 @@
       var brand = product.brand;
       document.getElementById("product-line").textContent = brand ? (name + " · " + brand) : name;
 
-      var copy = "";
-      if (status === "UNKNOWN") copy = "No source. Do not guess.";
-      document.getElementById("unknown-copy").textContent = copy;
+      document.getElementById("unknown-copy").textContent = STATUS_TAGLINES[status] || "";
 
       var imgWrap = document.getElementById("off-image-wrap");
       var img = document.getElementById("off-image");
@@ -914,10 +920,11 @@
       }
 
       var datesEv = whyDatesEvent(product);
-      var enzyme = product.enzyme == null || product.enzyme === "" ? "unknown" : String(product.enzyme);
       var whyHtml = "";
       whyHtml += "<div class=\"why-row\"><strong>Ingredients that drove the call</strong>" + escapeHtml(ingredientsDroveCall(product)) + "</div>";
-      whyHtml += "<div class=\"why-row\"><strong>Enzyme type</strong>" + escapeHtml(enzyme) + "</div>";
+      if (product.enzyme != null && product.enzyme !== "") {
+        whyHtml += "<div class=\"why-row\"><strong>Enzyme type</strong>" + escapeHtml(String(product.enzyme)) + "</div>";
+      }
       if (product.pack_claim) {
         whyHtml += "<div class=\"why-row\"><strong>Pack / manufacturer claim</strong>" + escapeHtml(product.pack_claim) + "</div>";
       }

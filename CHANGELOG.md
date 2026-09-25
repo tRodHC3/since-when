@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 0.5.0 — 2026-09-25
+- Result screen: short tagline under the product name per status (HALAL/HALAL • NO MARK/CLEAR/PORK/ANIMAL RENNET/UNKNOWN); giant status word unchanged
+- Why panel: Enzyme type row hidden when enzyme is null, instead of printing "unknown"
+- Learn tab: trimmed ANIMAL RENNET card under 60 words; other cards unchanged
+- New scripts/validate_seed.py: validates index.html SEED or any drafts JSON file (source_url, barcode types, allowed status, no bullet in CSS class, no duplicate barcodes, no fixture:true in accepted.json)
+- New scripts/test_pipeline.py: 5 behavioral checks against the live pipeline, all passing
+- drafts/NOTES.md added
+- Haribo and Jet-Puffed identity pulls attempted (drafts/haribo.json, drafts/jet-puffed.json) — Open Food Facts returned 503 both times, so both files are empty and drafts/proposed/{haribo,jet-puffed}.json are empty too. Not finished: no real Haribo/Jet-Puffed rows exist yet; rerun scripts/pull_off_brand.py for these brands once OFF is reachable.
+
 ## 0.4.2 — 2026-09-25
 - Pipeline scripts + Cabot/Coke draft pulls. App runtime unchanged.
 
