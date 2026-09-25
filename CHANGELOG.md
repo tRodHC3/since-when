@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 0.6.0 — 2026-09-25
+- Android sideload wrapper via Capacitor (`@capacitor/core`, `@capacitor/cli`, `@capacitor/android`). `index.html` and its `SEED` array are unchanged; GitHub Pages keeps serving from the repo root exactly as before.
+- New: `package.json`, `capacitor.config.json` (`webDir: "www"` — Capacitor's CLI rejects `.` as webDir), `android/` (generated Capacitor Android project, gitignored except its own tracked template files), `www/index.html` (hard link to root `index.html`, gitignored, regenerated before each build).
+- `android/AndroidManifest.xml`: added `CAMERA` permission and `android.hardware.camera`/`camera.autofocus` features with `required="false"`, so the app installs on devices without a camera and the existing `getUserMedia`/html5-qrcode scanner (unchanged) can request camera access inside the WebView. No scanner code changes.
+- README: new "Android APK" section with Windows build/sideload steps.
+- Not done: this machine has no JDK and no Android SDK installed, so `.\gradlew.bat assembleDebug` has not been run to completion — `npx cap add android` and `npx cap sync` were verified working, but no `.apk` has actually been produced or tested. See README Prerequisites.
+
 ## 0.5.2 — 2026-09-25
 - Result screen: "Checked on {verified_on}" line under the product name, using the newest verified_on across that product's events; shows "Checked on date unspecified" when every verified_on is null. Small muted style, same as the footer. Shown for every status, including CLEAR, HALAL, and UNKNOWN.
 

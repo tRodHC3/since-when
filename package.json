@@ -1,0 +1,14 @@
+{
+  "name": "since-when",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Since When: Android sideload wrapper (Capacitor) around the static index.html app.",
+  "scripts": {
+    "sync": "cap sync"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/cli": "8.5.2",
+    "@capacitor/core": "8.5.2"
+  }
+}
