@@ -69,3 +69,9 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 
 1. Seed table match → use the seed row. No network.
 2. Otherwise GET `https://world.openfoodfacts.org/api/v2/product/{barcode}.json?fields=product_name,brands,ingredients_text,image_url` (5s timeout). Name/brand/ingredients/image only. Status stays UNKNOWN.
+
+## Catalog
+
+US products we actually handle first, roughly in this order: Tillamook, then later Cabot, Coca-Cola sparkling, one marshmallow brand.
+
+Unverified identity pulls for these brands live in `drafts/`, one JSON file per brand, each row `{gtin, name, brand, image_url}` only — no status field. `index.html` does not load `drafts/`. A product only gets a verdict (CLEAR, HALAL, PORK, etc.) when someone manually adds a sourced seed row per the rules above; see `drafts/README.md` for the data source and license.

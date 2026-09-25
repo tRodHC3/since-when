@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 0.4.1 — 2026-09-25
+- Drafts catalog started; Tillamook identity pull; app runtime unchanged
+
 ## 0.4.0 — 2026-09-24
 - Inverted colors; HALAL/NO MARK are warnings; CLEAR is inspected with no cert; Sprite moved to CLEAR
 
