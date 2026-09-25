@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "coca-cola-services-sa-nv-coca-cola-original-taste",
+    "barcodes": [
+      "5449000054227"
+    ],
+    "brand": "COCA-COLA SERVICES SA/NV, Coca-Cola",
+    "product": "Coca-Cola Original Taste",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-services-sa-nv-coca-cola-sans-sucres",
+    "barcodes": [
+      "5449000214799"
+    ],
+    "brand": "COCA-COLA SERVICES SA/NV, Coca-Cola",
+    "product": "Coca-Cola sans sucres",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-original",
+    "barcodes": [
+      "5449000214911"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Original",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-original-taste",
+    "barcodes": [
+      "5449000000439"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca Cola Original taste",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-services-sa-nv-coca-cola-zero-sugar",
+    "barcodes": [
+      "5449000131805"
+    ],
+    "brand": "COCA-COLA SERVICES SA/NV, Coca-Cola",
+    "product": "Coca-Cola Zero Sugar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-cola-500-ml",
+    "barcodes": [
+      "54491472"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Cola 500 Ml",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-500ml",
+    "barcodes": [
+      "5449000131836"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Zero 500ml",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola",
+    "barcodes": [
+      "42105220"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca Cola",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-5449000000286",
+    "barcodes": [
+      "5449000000286"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca Cola",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-pet-1-75l-coca",
+    "barcodes": [
+      "5000112611861"
+    ],
+    "brand": "Coca-Cola",
+    "product": "PET 1.75L COCA",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-go-t-original",
+    "barcodes": [
+      "5449000267412"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola goût original",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-slim-25cl",
+    "barcodes": [
+      "5449000008046"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola slim 25cl",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-1-25l",
+    "barcodes": [
+      "5000112611762"
+    ],
+    "brand": "Coca-Cola, Coke ZÉRO®",
+    "product": "coca cola zero 1,25L",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero",
+    "barcodes": [
+      "90375323"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca cola zero",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-hawai-ananas",
+    "barcodes": [
+      "5449000036919"
+    ],
+    "brand": "Coca-Cola",
+    "product": "HAWAI ANANAS",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-5449000133335",
+    "barcodes": [
+      "5449000133335"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Zero",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cappy-pulpy-p-cne",
+    "barcodes": [
+      "5449000203823"
+    ],
+    "brand": "Cappy, Coca-Cola",
+    "product": "Pulpy pècne",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-5449000131843",
+    "barcodes": [
+      "5449000131843"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Zero",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-z-ro-sucres-z-ro-caf-ine",
+    "barcodes": [
+      "5449000223555"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca Cola Zéro Sucres Zéro Caféine",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-sprite",
+    "barcodes": [
+      "8901764032912"
+    ],
+    "brand": "Coca-Cola, Sprite",
+    "product": "Sprite",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-life",
+    "barcodes": [
+      "5000112611311"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola life",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-50cl",
+    "barcodes": [
+      "5000112558272"
+    ],
+    "brand": "Coca-Cola",
+    "product": "COCA COLA 50CL",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-sprite-5449000006295",
+    "barcodes": [
+      "5449000006295"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Sprite",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-sprite-3948764032912",
+    "barcodes": [
+      "3948764032912"
+    ],
+    "brand": "Coca-Cola, Sprite",
+    "product": "Sprite",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-original-5000112546415",
+    "barcodes": [
+      "5000112546415"
+    ],
+    "brand": "Coca-Cola, Coca-Cola Company",
+    "product": "Coca-Cola Original",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-cherry",
+    "barcodes": [
+      "5449000214843"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Cherry",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-5449000130389",
+    "barcodes": [
+      "5449000130389"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca Cola",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-caffeine-free",
+    "barcodes": [
+      "5449000233295"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Zero Caffeine Free",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-cola-mini",
+    "barcodes": [
+      "5449000011114"
+    ],
+    "brand": "Coca-Cola",
+    "product": "cola mini",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-5449000028921",
+    "barcodes": [
+      "5449000028921"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca Cola",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "minute-maid-minute-maid",
+    "barcodes": [
+      "5449000257796"
+    ],
+    "brand": "Minute Maid, Coca-Cola",
+    "product": "Minute Maid",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-5000112557664",
+    "barcodes": [
+      "5000112557664"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca Cola",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "fanta-fanta-naranja",
+    "barcodes": [
+      "5449000004840"
+    ],
+    "brand": "Fanta, COCA-COLA SERVICES SA/NV, Coca-Cola",
+    "product": "Fanta Naranja",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "aquarius-bebida-isot-nica-lim-n",
+    "barcodes": [
+      "5449000164957"
+    ],
+    "brand": "Aquarius, Coca-Cola, The Coca-Cola Company",
+    "product": "Bebida isotónica limón",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-zero",
+    "barcodes": [
+      "5449000169327"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Zero Zero",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-sugar-25cl",
+    "barcodes": [
+      "5449000020987"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Zero Sugar 25cl",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-42105244",
+    "barcodes": [
+      "42105244"
+    ],
+    "brand": "Coca-Cola",
+    "product": "",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-cherry-5449000267436",
+    "barcodes": [
+      "5449000267436"
+    ],
+    "brand": "Coca-Cola, Coke",
+    "product": "Coca-Cola Cherry",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-cherry",
+    "barcodes": [
+      "54492790"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Cherry",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-1-liter",
+    "barcodes": [
+      "5449000017888"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola 1 Liter",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-5000112556247",
+    "barcodes": [
+      "5000112556247"
+    ],
+    "brand": "Coca-Cola",
+    "product": "",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-1",
+    "barcodes": [
+      "6130003000029"
+    ],
+    "brand": "Coca-Cola",
+    "product": "كوكا كولا 1 لتر",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-sugar",
+    "barcodes": [
+      "5000112638745"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca cola zero sugar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-original-taste-5000112565348",
+    "barcodes": [
+      "5000112565348"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Original Taste",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-nap-j-gazowany-o-smaku-cola",
+    "barcodes": [
+      "5449000158895"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Napój gazowany o smaku cola",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-thums-up",
+    "barcodes": [
+      "8901764042300"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Thums Up",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-gust-original",
+    "barcodes": [
+      "5942321000060"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Gust Original",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-original-0-5",
+    "barcodes": [
+      "59492573"
+    ],
+    "brand": "Coca-Cola",
+    "product": "Coca-Cola Original 0.5",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "aquarius-aquarius-naranja",
+    "barcodes": [
+      "5449000033819"
+    ],
+    "brand": "Aquarius, Coca-Cola, The Coca-Cola Company",
+    "product": "Aquarius Naranja",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "coca-cola-coca-cola-zero-5000112576009",
+    "barcodes": [
+      "5000112576009"
+    ],
+    "brand": "Coca-Cola, Coca-Cola Company",
+    "product": "Coca-Cola Zero",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  }
+]

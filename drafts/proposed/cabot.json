@@ -1,0 +1,482 @@
+[
+  {
+    "id": "cabot-cabot-vermont-sharp-cheddar",
+    "barcodes": [
+      "078354850183"
+    ],
+    "brand": "Cabot, Cabot Creamery Cooperative",
+    "product": "Cabot, vermont sharp cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-alpine-cheddar-cheese",
+    "barcodes": [
+      "078354713501"
+    ],
+    "brand": "Cabot, Cabot Creamery Cooperative",
+    "product": "Alpine cheddar cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-calmars-l-encre-cabo-de-penas",
+    "barcodes": [
+      "8411555160033"
+    ],
+    "brand": "Cabot",
+    "product": "Calmars à l'encre CABO DE PENAS",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-extra-sharp-chedder-cheese",
+    "barcodes": [
+      "078354715284"
+    ],
+    "brand": "Cabot",
+    "product": "Extra Sharp Chedder Cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-american-cheese-food",
+    "barcodes": [
+      "078354505779"
+    ],
+    "brand": "Cabot",
+    "product": "American Cheese Food",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-k-hne-bohnensalat-330g",
+    "barcodes": [
+      "40804149"
+    ],
+    "brand": "Cabot, Kühne",
+    "product": "Kühne Bohnensalat 330G",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-triple-cream-greek-yogurt",
+    "barcodes": [
+      "078354323236"
+    ],
+    "brand": "Cabot",
+    "product": "Triple Cream Greek Yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-seriously-sharp-cheddar-cheese-popcorn",
+    "barcodes": [
+      "850016944764"
+    ],
+    "brand": "Cabot",
+    "product": "Seriously Sharp Cheddar Cheese Popcorn",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-alpine-cheddar-cheese-2066827003981",
+    "barcodes": [
+      "2066827003981"
+    ],
+    "brand": "Cabot",
+    "product": "Alpine Cheddar Cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-gouda-cheese",
+    "barcodes": [
+      "078354723296"
+    ],
+    "brand": "Cabot",
+    "product": "Gouda Cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-3-year-old-cheddar",
+    "barcodes": [
+      "211422615219"
+    ],
+    "brand": "Cabot",
+    "product": "3 Year Old Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-greek-yogurt",
+    "barcodes": [
+      "078354311914"
+    ],
+    "brand": "Cabot",
+    "product": "Greek Yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-3-year-old-cheddar-211422214191",
+    "barcodes": [
+      "211422214191"
+    ],
+    "brand": "Cabot",
+    "product": "3 Year Old Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-greek-yogurt-078354311534",
+    "barcodes": [
+      "078354311534"
+    ],
+    "brand": "Cabot",
+    "product": "Greek Yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-mad-river-reserve-alpine",
+    "barcodes": [
+      "214433810963"
+    ],
+    "brand": "Cabot",
+    "product": "Mad River Reserve Alpine",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-reduced-fat-vanilla-bean-greek-yogurt",
+    "barcodes": [
+      "078354311521"
+    ],
+    "brand": "Cabot",
+    "product": "Reduced Fat Vanilla Bean Greek Yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-greek-yogurt-078354302658",
+    "barcodes": [
+      "078354302658"
+    ],
+    "brand": "Cabot",
+    "product": "Greek Yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-vanilla-bean-greek-yogurt",
+    "barcodes": [
+      "007835431157"
+    ],
+    "brand": "Cabot",
+    "product": "Vanilla Bean Greek Yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-reduced-fat-yogurt",
+    "barcodes": [
+      "078354311529"
+    ],
+    "brand": "Cabot",
+    "product": "Reduced Fat Yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "cabot-3-year-old-cheddar-211422514734",
+    "barcodes": [
+      "211422514734"
+    ],
+    "brand": "Cabot",
+    "product": "3 Year Old Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  }
+]

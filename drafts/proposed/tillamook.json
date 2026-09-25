@@ -1,0 +1,914 @@
+[
+  {
+    "id": "tillamook-pepper-jack",
+    "barcodes": [
+      "072830030137"
+    ],
+    "brand": "Tillamook",
+    "product": "Pepper Jack",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-smoked-sausages",
+    "barcodes": [
+      "051943053868"
+    ],
+    "brand": "Tillamook",
+    "product": "Smoked Sausages",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-medium-cheddar-cheese",
+    "barcodes": [
+      "072830000758"
+    ],
+    "brand": "Tillamook",
+    "product": "Medium Cheddar Cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-sharp-cheddar",
+    "barcodes": [
+      "072830030021"
+    ],
+    "brand": "Tillamook",
+    "product": "SHARP CHEDDAR",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-mexican-4-cheese-farmstyle-shreds",
+    "barcodes": [
+      "072830011402"
+    ],
+    "brand": "Tillamook",
+    "product": "Mexican 4 Cheese Farmstyle Shreds",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-medium-cheddar",
+    "barcodes": [
+      "072830001748"
+    ],
+    "brand": "Tillamook",
+    "product": "Medium Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-swiss-9-farmstyle-slices",
+    "barcodes": [
+      "072830030007"
+    ],
+    "brand": "Tillamook",
+    "product": "Swiss 9 Farmstyle Slices",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-whole-milk-mozzarella",
+    "barcodes": [
+      "072830001762"
+    ],
+    "brand": "Tillamook",
+    "product": "WHOLE MILK MOZZARELLA",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-sharp-white-cheddar",
+    "barcodes": [
+      "072830000956"
+    ],
+    "brand": "Tillamook",
+    "product": "Sharp White Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-medium-cheddar-072830002011",
+    "barcodes": [
+      "072830002011"
+    ],
+    "brand": "Tillamook",
+    "product": "Medium Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-colby-jack",
+    "barcodes": [
+      "072830004336"
+    ],
+    "brand": "Tillamook",
+    "product": "COLBY JACK",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-colby-jack-cheese-loaf",
+    "barcodes": [
+      "072830005500"
+    ],
+    "brand": "Tillamook",
+    "product": "Colby jack cheese loaf",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-extra-sharp-white-cheddar",
+    "barcodes": [
+      "072830030038"
+    ],
+    "brand": "Tillamook",
+    "product": "Extra Sharp White Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-chive-onion-farmstyle-cream-cheese-spread",
+    "barcodes": [
+      "072830702287"
+    ],
+    "brand": "Tillamook",
+    "product": "CHIVE & ONION FARMSTYLE CREAM CHEESE SPREAD",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-german-chocolate-cake",
+    "barcodes": [
+      "072830081405"
+    ],
+    "brand": "Tillamook",
+    "product": "German Chocolate Cake",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-old-fashioned-vanilla-farmstyle-greek-blended-lowfat-yogurt",
+    "barcodes": [
+      "072830440059"
+    ],
+    "brand": "Tillamook",
+    "product": "Old-fashioned vanilla farmstyle greek blended lowfat yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-oregon-strawberry-farmstyle-greek-lowfat-yogurt",
+    "barcodes": [
+      "072830440011"
+    ],
+    "brand": "Tillamook",
+    "product": "Oregon Strawberry Farmstyle Greek Lowfat Yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-lowfat-yogurt",
+    "barcodes": [
+      "072830400053"
+    ],
+    "brand": "Tillamook",
+    "product": "Lowfat yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-cultured-sour-cream",
+    "barcodes": [
+      "072830702010"
+    ],
+    "brand": "Tillamook",
+    "product": "Cultured Sour Cream",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-greek-yogurt-vanilla",
+    "barcodes": [
+      "072830444187"
+    ],
+    "brand": "Tillamook",
+    "product": "Greek Yogurt Vanilla",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-medium-white-cheddar",
+    "barcodes": [
+      "072830030113"
+    ],
+    "brand": "Tillamook",
+    "product": "Medium White Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-greek-yogurt-raspberry",
+    "barcodes": [
+      "072830440035"
+    ],
+    "brand": "Tillamook",
+    "product": "Greek Yogurt Raspberry",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-strawberries-and-cream",
+    "barcodes": [
+      "072830081375"
+    ],
+    "brand": "Tillamook",
+    "product": "Strawberries and Cream",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-greek-yogurt-mixed-berry",
+    "barcodes": [
+      "072830440387"
+    ],
+    "brand": "Tillamook",
+    "product": "Greek Yogurt Mixed Berry",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-greek-yogurt-plain",
+    "barcodes": [
+      "072830444149"
+    ],
+    "brand": "Tillamook",
+    "product": "GREEK YOGURT PLAIN",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-smoked-black-pepper",
+    "barcodes": [
+      "072830000970"
+    ],
+    "brand": "Tillamook",
+    "product": "Smoked Black Pepper",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-colby-jack-072830001779",
+    "barcodes": [
+      "072830001779"
+    ],
+    "brand": "Tillamook",
+    "product": "Colby Jack",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-medium-white-cheddar-natural-cheese",
+    "barcodes": [
+      "072830002110"
+    ],
+    "brand": "Tillamook, Tillamook County Creamery Assn.",
+    "product": "Medium White Cheddar Natural Cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-medium-cheddar-072830004015",
+    "barcodes": [
+      "072830004015"
+    ],
+    "brand": "Tillamook",
+    "product": "Medium Cheddar",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-pepper-jack-cheese",
+    "barcodes": [
+      "072830006132"
+    ],
+    "brand": "Tillamook, Ttillamook County Creamery Assn.",
+    "product": "Pepper Jack Cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-swiss-natural-cheese",
+    "barcodes": [
+      "072830008099"
+    ],
+    "brand": "Tillamook",
+    "product": "Swiss Natural Cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-colby-jack-shredded-cheese",
+    "barcodes": [
+      "072830011334"
+    ],
+    "brand": "Tillamook, Tillamook County Creamery Association Tillamook",
+    "product": "Colby jack shredded cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-cheddar-jack-medium-cheddar-monterey-jack-shredded-cheese",
+    "barcodes": [
+      "072830011365"
+    ],
+    "brand": "Tillamook, Tillamook County Creamery Association",
+    "product": "Cheddar jack medium cheddar & monterey jack shredded cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-good-creamy-lowfat-yogurt",
+    "barcodes": [
+      "072830400008"
+    ],
+    "brand": "Tillamook",
+    "product": "Good & creamy lowfat yogurt",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-french-vanilla",
+    "barcodes": [
+      "072830403115"
+    ],
+    "brand": "Tillamook",
+    "product": "French Vanilla",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-washington-raspberry",
+    "barcodes": [
+      "072830400060"
+    ],
+    "brand": "Tillamook",
+    "product": "Washington Raspberry",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-california-peach-farmstyle-greek",
+    "barcodes": [
+      "072830440042"
+    ],
+    "brand": "Tillamook",
+    "product": "California peach farmstyle greek",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  },
+  {
+    "id": "tillamook-colby-jack-and-monterey-jack-cheese",
+    "barcodes": [
+      "072830007214"
+    ],
+    "brand": "Tillamook",
+    "product": "Colby Jack and Monterey Jack Cheese",
+    "status": "UNKNOWN",
+    "fixture": false,
+    "pack_claim": null,
+    "enzyme": null,
+    "events": [
+      {
+        "effective_on": null,
+        "labeled_on": null,
+        "verified_on": "2026-09-25",
+        "field": "pack_inspection",
+        "old_value": null,
+        "new_value": "Catalog identity only. No verdict accepted.",
+        "source_url": "https://world.openfoodfacts.org/",
+        "notes": "From OFF catalog draft. Not CLEAR, not HALAL, not PORK."
+      }
+    ]
+  }
+]

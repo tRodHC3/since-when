@@ -74,4 +74,4 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 
 US products we actually handle first, roughly in this order: Tillamook, then later Cabot, Coca-Cola sparkling, one marshmallow brand.
 
-Unverified identity pulls for these brands live in `drafts/`, one JSON file per brand, each row `{gtin, name, brand, image_url}` only — no status field. `index.html` does not load `drafts/`. A product only gets a verdict (CLEAR, HALAL, PORK, etc.) when someone manually adds a sourced seed row per the rules above; see `drafts/README.md` for the data source and license.
+Unverified identity pulls for these brands live in `drafts/`, one JSON file per brand, each row `{gtin, name, brand, image_url}` only — no status field. `index.html` does not load `drafts/`. `propose_seed.py` writes UNKNOWN stubs under `drafts/proposed/`. `accept_row.py` appends a row you already chose to `drafts/accepted.json`. Neither script edits `index.html`. A product only gets a verdict (CLEAR, HALAL, PORK, etc.) when someone manually pastes a sourced seed row per the rules above; see `drafts/README.md` for the pipeline, the data source, and the license.

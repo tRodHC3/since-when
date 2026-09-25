@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 0.4.2 — 2026-09-25
+- Pipeline scripts + Cabot/Coke draft pulls. App runtime unchanged.
+
 ## 0.4.1 — 2026-09-25
 - Drafts catalog started; Tillamook identity pull; app runtime unchanged
 
