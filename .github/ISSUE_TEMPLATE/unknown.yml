@@ -1,0 +1,43 @@
+name: Unknown barcode
+description: Report a barcode that came back UNKNOWN so it can be researched and added to the seed table.
+title: "Unknown barcode: "
+labels: ["unknown-barcode"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a **public issue** on GitHub — anything you post here is visible to anyone.
+        You'll need a **GitHub account** to submit it.
+
+        If you attach a photo of the pack, please **strip GPS / location data first** (turn off location tagging before you take the photo, or strip EXIF before uploading). Do not attach photos with location on.
+  - type: input
+    id: barcode
+    attributes:
+      label: Barcode
+      description: The UPC/EAN number the app scanned or you typed in.
+      placeholder: "049000555318"
+    validations:
+      required: true
+  - type: input
+    id: product-name
+    attributes:
+      label: Product name (if known)
+      description: Brand and product name, as printed on the pack.
+      placeholder: "Sprite Chill Cherry Lime 12 fl oz can"
+    validations:
+      required: true
+  - type: input
+    id: where-seen
+    attributes:
+      label: Where you saw it
+      description: Store, region, or country where you found this product.
+      placeholder: "Costco, Seattle WA"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+      description: Anything else useful — pack claims, certification marks you saw, links to a source, etc.
+    validations:
+      required: false

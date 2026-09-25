@@ -65,6 +65,10 @@ On the scan screen, these load **seed rows only**. They never call Open Food Fac
 7. Add the barcode to `barcodes` only for that SKU. Do not copy another SKU's status onto a different barcode.
 8. Barcodes are stored as the 12-digit UPC-A printed on the pack, because a 13-digit EAN-13 scan is normalized down to 12 before lookup.
 
+## Submit an unknown barcode
+
+On an UNKNOWN result, tap **Submit this code** to open a public GitHub issue (via `.github/ISSUE_TEMPLATE/unknown.yml`) pre-filled with the barcode. You'll need a GitHub account; do not attach photos with location data on.
+
 ## Lookup order
 
 1. Seed table match → use the seed row. No network.

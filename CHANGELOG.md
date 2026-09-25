@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 0.5.1 — 2026-09-25
+- UNKNOWN result: new "Submit this code" button opens a public GitHub issue (`.github/ISSUE_TEMPLATE/unknown.yml`) in a new tab, barcode pre-filled in the title and form field. No token in the page.
+- Footer added to Scan, Result, and Learn screens: "Not a ruling. Sources linked. Product names may come from Open Food Facts (ODbL)." with a credit link to https://openfoodfacts.org
+- README: one line on how to submit an unknown barcode
+- Decisions recorded (not yet implemented):
+  - A photographed pack counts as accepted evidence for a seed row, alongside a `source_url`
+  - v1.1: an APK build will fetch seed data remotely with a local seed fallback if the fetch fails
+  - Seed rows get re-checked on a 12/6-month cadence; an overdue banner will show once a row's `verified_on` ages past that window
+
 ## 0.5.0 — 2026-09-25
 - Result screen: short tagline under the product name per status (HALAL/HALAL • NO MARK/CLEAR/PORK/ANIMAL RENNET/UNKNOWN); giant status word unchanged
 - Why panel: Enzyme type row hidden when enzyme is null, instead of printing "unknown"

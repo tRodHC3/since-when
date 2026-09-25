@@ -269,7 +269,7 @@
     .event-undated { color: #737373; font-size: 1rem; margin-bottom: 4px; }
     .muted { color: #737373; }
     .empty-history { color: #737373; }
-    .result-footer {
+    .app-footer {
       margin: 8px 20px 16px;
       color: #737373;
       font-size: 0.85rem;
@@ -279,6 +279,14 @@
       width: calc(100% - 40px);
       margin: 0 20px 12px;
     }
+    #submit-unknown {
+      display: none;
+      width: calc(100% - 40px);
+      margin: 16px 20px 0;
+      background: #171717;
+      color: #f5f5f5;
+    }
+    #submit-unknown.is-visible { display: block; }
 
     #learn-view { padding: 20px 20px calc(88px + env(safe-area-inset-bottom)); }
     .learn-card {
@@ -362,6 +370,7 @@
         <button type="button" data-barcode="000000000004">Marked test fixture</button>
         <button type="button" data-barcode="000000000099">Unknown barcode</button>
       </div>
+      <footer class="app-footer">Not a ruling. Sources linked. Product names may come from <a href="https://openfoodfacts.org" target="_blank" rel="noopener noreferrer">Open Food Facts</a> (ODbL).</footer>
     </div>
   </section>
 
@@ -374,6 +383,7 @@
     <p id="product-line"></p>
     <div id="callout"></div>
     <p id="unknown-copy"></p>
+    <button id="submit-unknown" type="button">Submit this code</button>
     <div id="off-image-wrap"><img id="off-image" alt=""></div>
     <details id="why" open>
       <summary>Why</summary>
@@ -383,7 +393,7 @@
       <h2>History</h2>
       <div id="timeline" class="timeline"></div>
     </div>
-    <footer class="result-footer">Not a religious ruling. Not a certifier. Sources linked.</footer>
+    <footer class="app-footer">Not a ruling. Sources linked. Product names may come from <a href="https://openfoodfacts.org" target="_blank" rel="noopener noreferrer">Open Food Facts</a> (ODbL).</footer>
     <button id="scan-another" type="button">Scan another</button>
   </section>
 
@@ -431,6 +441,7 @@
       <h2 class="neutral">Slaughter</h2>
       <p>Dhabiha is the slaughter rule: throat cut while the animal is alive, invocation said over it. That is a religious requirement, not a USDA flavor grade. Not every marked product is meat. Lab-enzyme cheddar is a certification claim. Animal-rennet cheddar is a slaughtered calf. This app prints the source, not a fatwa and not a speech.</p>
     </article>
+    <footer class="app-footer">Not a ruling. Sources linked. Product names may come from <a href="https://openfoodfacts.org" target="_blank" rel="noopener noreferrer">Open Food Facts</a> (ODbL).</footer>
   </section>
 
   <nav id="tab-bar">
@@ -876,6 +887,7 @@
       document.getElementById("unknown-copy").textContent = "";
       document.getElementById("off-image-wrap").classList.remove("is-visible");
       document.getElementById("off-image").removeAttribute("src");
+      document.getElementById("submit-unknown").classList.remove("is-visible");
       document.getElementById("why-body").innerHTML = "";
       document.getElementById("why").open = true;
       document.getElementById("callout").textContent = "";
@@ -884,6 +896,13 @@
         document.getElementById("callout").classList.remove(STATUS_CLASSES[i]);
       }
       document.getElementById("timeline").innerHTML = "";
+    }
+
+    function buildUnknownIssueUrl(code) {
+      var title = "Unknown barcode: " + code;
+      return "https://github.com/tRodHC3/since-when/issues/new?template=unknown.yml"
+        + "&title=" + encodeURIComponent(title)
+        + "&barcode=" + encodeURIComponent(code);
     }
 
     function renderResult(product) {
@@ -907,6 +926,16 @@
       document.getElementById("product-line").textContent = brand ? (name + " · " + brand) : name;
 
       document.getElementById("unknown-copy").textContent = STATUS_TAGLINES[status] || "";
+
+      var submitBtn = document.getElementById("submit-unknown");
+      if (kebab === "unknown") {
+        var code = product.barcodes && product.barcodes[0] ? String(product.barcodes[0]) : "";
+        submitBtn.dataset.issueUrl = buildUnknownIssueUrl(code);
+        submitBtn.classList.add("is-visible");
+      } else {
+        submitBtn.classList.remove("is-visible");
+        delete submitBtn.dataset.issueUrl;
+      }
 
       var imgWrap = document.getElementById("off-image-wrap");
       var img = document.getElementById("off-image");
@@ -1252,6 +1281,10 @@
 
     document.getElementById("scan-another").addEventListener("click", function () {
       scanAnother();
+    });
+    document.getElementById("submit-unknown").addEventListener("click", function () {
+      var url = this.dataset.issueUrl;
+      if (url) window.open(url, "_blank", "noopener,noreferrer");
     });
     document.getElementById("start-camera").addEventListener("click", function () {
       startCamera();
