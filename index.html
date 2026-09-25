@@ -192,6 +192,11 @@
       font-size: 1.25rem;
       font-weight: 600;
     }
+    #checked-on {
+      padding: 4px 20px 0;
+      color: #737373;
+      font-size: 0.85rem;
+    }
     #unknown-copy {
       padding: 6px 20px 0;
       color: #a3a3a3;
@@ -381,6 +386,7 @@
       <p id="fixture-note">Test fixture only. Not a real grocery SKU.</p>
     </div>
     <p id="product-line"></p>
+    <p id="checked-on"></p>
     <div id="callout"></div>
     <p id="unknown-copy"></p>
     <button id="submit-unknown" type="button">Submit this code</button>
@@ -805,6 +811,21 @@
       return earliestEffectiveEvent(product.events || []) || (product.events && product.events[0]) || null;
     }
 
+    function newestVerifiedOn(events) {
+      var best = null;
+      var i;
+      if (!events) return null;
+      for (i = 0; i < events.length; i += 1) {
+        var ev = events[i];
+        if (ev && ev.verified_on != null && ev.verified_on !== "") {
+          if (best == null || String(ev.verified_on) > String(best)) {
+            best = ev.verified_on;
+          }
+        }
+      }
+      return best;
+    }
+
     function ingredientsDroveCall(product) {
       var parts = [];
       var events = product.events || [];
@@ -884,6 +905,7 @@
       document.getElementById("test-badge").classList.remove("is-visible");
       document.getElementById("fixture-note").classList.remove("is-visible");
       document.getElementById("product-line").textContent = "";
+      document.getElementById("checked-on").textContent = "";
       document.getElementById("unknown-copy").textContent = "";
       document.getElementById("off-image-wrap").classList.remove("is-visible");
       document.getElementById("off-image").removeAttribute("src");
@@ -924,6 +946,9 @@
       var name = product.product || "Unknown product";
       var brand = product.brand;
       document.getElementById("product-line").textContent = brand ? (name + " · " + brand) : name;
+
+      var newestVerified = newestVerifiedOn(product.events || []);
+      document.getElementById("checked-on").textContent = "Checked on " + (newestVerified ? String(newestVerified) : "date unspecified");
 
       document.getElementById("unknown-copy").textContent = STATUS_TAGLINES[status] || "";
 

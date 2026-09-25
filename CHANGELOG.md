@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 0.5.2 — 2026-09-25
+- Result screen: "Checked on {verified_on}" line under the product name, using the newest verified_on across that product's events; shows "Checked on date unspecified" when every verified_on is null. Small muted style, same as the footer. Shown for every status, including CLEAR, HALAL, and UNKNOWN.
+
 ## 0.5.1 — 2026-09-25
 - UNKNOWN result: new "Submit this code" button opens a public GitHub issue (`.github/ISSUE_TEMPLATE/unknown.yml`) in a new tab, barcode pre-filled in the title and form field. No token in the page.
 - Footer added to Scan, Result, and Learn screens: "Not a ruling. Sources linked. Product names may come from Open Food Facts (ODbL)." with a credit link to https://openfoodfacts.org
